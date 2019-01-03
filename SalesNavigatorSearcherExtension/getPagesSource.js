@@ -1,6 +1,7 @@
 var merged = [];
 function DOMtoString(document_root) {
-  window.scrollBy(0, 100000);
+  setTimeout(2000, window.scrollBy(0, 100000));
+
     var html = '',
         node = document_root.firstChild;
     while (node) {
