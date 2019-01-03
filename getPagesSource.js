@@ -102,7 +102,7 @@ console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr);
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
 const  localMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
 for (var i = 0; i < localMerged.length; i++) {
-  Merged.push(localMerged[i])
+  merged.push(localMerged[i])
 }
 console.log('merged',merged,'mergedlocal',localMerged);
 var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
