@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   stopButton.addEventListener("click", function(){
     console.log('stop!');
     stop = true;
-  }
+  });
   startButton.addEventListener("click", function(){
     console.log('start');
     chrome.tabs.executeScript(null, {
