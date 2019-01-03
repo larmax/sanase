@@ -50,11 +50,8 @@ if (i > 5 && i < 31) {
 
   locationsArr.push(locations[i].innerHTML)
   }
-  console.log('locationsArr',locationsArr);
-  // for (var i = 0; i < titles.length; i++) {
-  // titlesArr.push(titles[i].innerHTML)
-  // }
-  // console.log('titlesArr',titlesArr);
+  console.log('locationsArr ',locationsArr);
+
   for(var i = 0; i < titlesAndCompanies.length; i++) {
 
       titlesAndCompaniesArr.push(titlesAndCompanies[i].innerHTML)
@@ -104,6 +101,8 @@ for(var i=0; i < namesArr.length; i++){
 console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr);
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
   const merged = [].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l));
+
+getElementsByClassName('search-results__pagination-next-button').click();
 return merged;
 }
 
