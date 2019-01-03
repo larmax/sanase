@@ -1,6 +1,6 @@
 {
   "name": "sanase",
-  "version": "1.0",
+  "version": "BETA 0.2",
   "manifest_version": 2,
   "description": "Get pages source from a popup",
   "browser_action": {
