@@ -1,4 +1,4 @@
-
+let merged = [];
 function DOMtoString(document_root) {
     var html = '',
         node = document_root.firstChild;
@@ -100,10 +100,11 @@ for(var i=0; i < namesArr.length; i++){
 
 console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr);
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
-  const merged = [].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l));
+let merged = [].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l));
 console.log(merged);
 var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
 nextButton[0].click();
+file: "writeToDocument.js"
 return merged;
 }
 

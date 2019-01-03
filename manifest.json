@@ -3,7 +3,7 @@
   "version": "0.2",
   "manifest_version": 2,
   "description": "Get pages source from a popup",
-  "background": "popup.js",
+  "background": "writeToDocument.js",
   "browser_action": {
 
     "default_popup": "popup.html"

@@ -7,10 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
   startButton.addEventListener("click", function(){
     console.log('start');
     chrome.tabs.executeScript(null, {
-      while (stop) {
-        file: 'getPagesSource.js'
 
-      }
+        file: 'getPagesSource.js'
 
   });
 
