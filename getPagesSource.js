@@ -64,12 +64,12 @@ companiesArr = [];
 for (var i = 0; i < titlesAndCompaniesArr.length; i++) {
 
   if (!titlesAndCompaniesArr[i].includes("<") && i > 2) {
-    console.log('title');
+
 titlesArr.push(titlesAndCompaniesArr[i])
 
   }
   if (titlesAndCompaniesArr[i].includes("Go to")) {
-    console.log('company');
+
 companiesArr.push(titlesAndCompaniesArr[i])
 
   }
@@ -79,20 +79,20 @@ companiesArr.push(titlesAndCompaniesArr[i])
 console.log('titlesArr berfor',titlesArr,'companiesArr before',companiesArr);
 var regex = /(<([^>]+)>)/ig;
 for(var i=0; i < namesArr.length; i++){
-  console.log('hwat');
+  console.log('');
   namesArr[i] = namesArr[i].replace('Profile result - ', 'name: ')
 
 
   }
   console.log('namesArr',namesArr);
   for(var i=0; i < titlesArr.length; i++){
-    console.log('hwat');
+
 
        titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
 
     }
     for(var i=0; i < companiesArr.length; i++){
-      console.log('hwat');
+
 
           companiesArr[i] = companiesArr[i].replace(regex, "").replace(/(\r\n|\n|\r|)/gm, "").replace(/\Go to.*/,'').replace('                  ','').replace('                          ','');
 
@@ -101,8 +101,9 @@ for(var i=0; i < namesArr.length; i++){
 console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr);
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
   const merged = [].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l));
-
-getElementsByClassName('search-results__pagination-next-button').click();
+console.log(merged);
+var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
+nextButton[0].click();
 return merged;
 }
 
