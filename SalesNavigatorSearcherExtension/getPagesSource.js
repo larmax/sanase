@@ -124,7 +124,8 @@ function findNames(html) {
 
 }
  setTimeout(function(){    window.scrollTo(0,100000);
-
+ window.scrollTo(0,100000);
+  window.scrollTo(0,100000);
    setTimeout(function(){
         chrome.runtime.sendMessage(DOMtoString(document));
    }, 1000);
