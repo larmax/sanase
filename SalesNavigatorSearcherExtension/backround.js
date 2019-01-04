@@ -10,11 +10,13 @@ startSaving = false;
 }else {
 
 output.push(response)
-uniq_fast(output)
-  console.log('output',output);
+
+
 
 
 }
+uniq_fast(output)
+console.log('output',output);
 function uniq_fast(a) {
     var seen = {};
     var out = [];
