@@ -1,9 +1,11 @@
 {
   "name": "sanase",
-  "version": "0.2",
+  "version": "0.3",
   "manifest_version": 2,
   "description": "Get pages source from a popup",
-  "background": "writeToDocument.js",
+  "background": {
+    "scripts":["backround.js"]
+    },
   "browser_action": {
 
     "default_popup": "popup.html"
