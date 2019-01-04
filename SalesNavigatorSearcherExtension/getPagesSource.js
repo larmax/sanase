@@ -108,9 +108,13 @@ function findNames(html) {
   const  localMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
 
 if (localMerged.length < 100) {
-   console.log('not enough!');
-    window.scrollTo(0,100000);
- return DOMtoString(document);
+  console.log('WAIT not enough!');
+    setTimeout(function(){
+
+       window.scrollTo(0,100000);
+        return DOMtoString(document);
+    },4000 );
+
 
 }else {
 
