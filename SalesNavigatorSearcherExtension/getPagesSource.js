@@ -110,7 +110,8 @@ function findNames(html) {
 if (localMerged.length < 100) {
    console.log('not enough!');
     window.scrollTo(0,100000);
- DOMtoString(document);
+ return DOMtoString(document);
+
 }else {
 
   console.log('mergedlocal',localMerged);
