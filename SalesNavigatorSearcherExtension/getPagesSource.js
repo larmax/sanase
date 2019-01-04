@@ -123,4 +123,7 @@ function findNames(html) {
   return localMerged;
 
 }
- setTimeout(function(){chrome.runtime.sendMessage(DOMtoString(document)) }, 2000);
+ setTimeout(function(){chrome.runtime.sendMessage(DOMtoString(document));
+    window.scrollTo(0,100000)
+
+  }, 2000);
