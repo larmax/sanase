@@ -107,6 +107,12 @@ function findNames(html) {
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
   const  localMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
 
+if (localMerged.length < 100) {
+   console.log('not enough!');
+    window.scrollTo(0,100000);
+ DOMtoString(document);
+}else {
+
   console.log('mergedlocal',localMerged);
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
@@ -121,6 +127,8 @@ function findNames(html) {
 // });
 
   return localMerged;
+
+}
 
 }
 
