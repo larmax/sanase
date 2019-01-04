@@ -123,9 +123,14 @@ function findNames(html) {
   return localMerged;
 
 }
+
  setTimeout(function(){    window.scrollTo(0,100000);
-
-
+  var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
+  if (typeof nextButton == 'undefined') {
+console.log('WAIT');
+ setTimeout(function(){
+ },2000 );
+  }
    setTimeout(function(){
        window.scrollTo(0,100000);
         chrome.runtime.sendMessage(DOMtoString(document));
