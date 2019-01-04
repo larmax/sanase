@@ -9,8 +9,11 @@ console.log('saving!');
 startSaving = false;
 }else {
 if (!output.includes(response)) {
+
   output.push(response)
 
+}else {
+  console.log('includes');
 }
 
 
