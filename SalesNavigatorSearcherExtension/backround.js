@@ -8,8 +8,10 @@ if (response == 'save') {
 console.log('saving!');
 startSaving = false;
 }else {
+if (!output.includes(response)) {
+  output.push(response)
 
-output.push(response)
+}
 
 
 
