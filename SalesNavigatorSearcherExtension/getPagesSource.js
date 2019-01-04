@@ -127,4 +127,4 @@ function findNames(html) {
    chrome.runtime.sendMessage(DOMtoString(document));
 
 
-  }, 2000);
+ }, 2500);
