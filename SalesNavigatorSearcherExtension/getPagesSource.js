@@ -50,11 +50,11 @@ function findNames() {
      missings.push(missing[i].innerText);
      }
      var i = -1;
-     missings.map(function(word){
+     missings.map(function(element){
      i++;
-     console.log(i,' length',word.length);
-     missingLengths.push(word.length);
-     if (word.length < 200) {
+     console.log(i,' length',element.length);
+     missingLengths.push(element.length);
+     if (element.length < 250) {
        hasMissing = true;
        theMissing = i;
        console.log('hasMissing',i);
@@ -196,10 +196,10 @@ setTimeout(function(){
 //    missings.push(missing[i].innerText);
 //    }
 //    var i = 0;
-//    missings.map(function(word){
+//    missings.map(function(element){
 //    i++;
 //
-//    missingLengths.push(word.length);
+//    missingLengths.push(element.length);
 //  });
 // for (var i = 0; i < missingLengths.length; i++) {
 // if (missingLengths[i] >= 200) {

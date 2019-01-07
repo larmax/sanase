@@ -23,8 +23,8 @@ if (isArrayInArray(output, response)) {
 function isArrayInArray(out,res ){
   var res_as_string = JSON.stringify(res);
 
-  var contains = arr.some(function(out){
-    return JSON.stringify(out) === item_as_string;
+  var contains = out.some(function(out){
+    return JSON.stringify(out) === res_as_string;
   });
   return contains;
 }
