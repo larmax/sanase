@@ -42,13 +42,14 @@ function findNames() {
   console.log('titles',titles);
   console.log('names',names,'titlesAndCompanies', titlesAndCompanies,'locations',locations);
 
-//   var missings = []
-// for (var i = 0; i < missing.length; i++) {
-//
+  var missings = []
+for (var i = 0; i < missing.length; i++) {
+
 // missings.push(missing[i].innerText);
-// console.log('missings',i,missings);
-// }
-console.log('length of missing',missing.length);
+console.log('missing ind length', missing[i].length);
+}
+
+
   for(var i = 0; i < names.length; i++) {
 
     if (i > 5 && i < 31) {
