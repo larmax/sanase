@@ -87,7 +87,9 @@ location = JSON.stringify(location);
   var regex = /(<([^>]+)>)/ig;
   for(var i=0; i < namesArr.length; i++){
 
-    namesArr[i] = namesArr[i].replace('Profile result - ', 'name: ')
+index = JSON.stringify(i),'name:';
+
+    namesArr[i] = namesArr[i].replace('Profile result - ', index)
 
 
   }
