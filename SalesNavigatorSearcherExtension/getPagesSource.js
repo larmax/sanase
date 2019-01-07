@@ -151,7 +151,8 @@ if (!localMerged.length >= 100) {
 console.log('WAIT');
  setTimeout(function(){
  },2000 );
-  })
+  }
+})
 }
    setTimeout(function(){
        window.scrollTo(0,100000);
