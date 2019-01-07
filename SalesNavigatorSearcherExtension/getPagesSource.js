@@ -38,12 +38,13 @@ function findNames() {
   var titlesAndCompanies = document.getElementsByClassName('Sans-14px-black-75%-bold')
   var locations = document.getElementsByClassName('result-lockup__misc-item')
   var titles = document.getElementsByTagName('span')
-  var missing = document.getElementsByTagName(' class="inline-flex vertical-align-middle"')
+  var missing = document.getElementsByClassName('inline-flex vertical-align-middle')
   console.log('titles',titles);
   console.log('names',names,'titlesAndCompanies', titlesAndCompanies,'locations',locations);
 
   var missings = []
 for (var i = 0; i < missing.length; i++) {
+  console.log(i);
 missings.push(missing[i].innerText);
 console.log('missings',missings);
 }
