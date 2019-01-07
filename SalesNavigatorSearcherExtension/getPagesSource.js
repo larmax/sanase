@@ -55,7 +55,7 @@ function findNames() {
   }
   for (var i = 0; i < locations.length; i++) {
 
-    locationsArr.push(locations[i])
+    locationsArr.push(locations[i].innerText)
   }
   console.log('locationsArr ',locationsArr);
 
@@ -101,14 +101,17 @@ index = JSON.stringify(i);
 
 
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
-    if (checkForMissing(i)) {
+    if (companiesArr.length < 25) {
+      if (checkForMissing() === null ) {
         console.log('splicing companies',i);
-titlesArr.splice(i, 0, 'unknown');
+      titlesArr.splice(checkForMissing(i), 0, 'unknown');
+      }
+
   }
   for(var i=0; i < companiesArr.length; i++){
     companiesArr[i] = companiesArr[i].replace(regex, "").replace(/(\r\n|\n|\r|)/gm, "").replace(/\Go to.*/,'').replace('                  ','').replace('                          ','');
 if (companiesArr.length < 25) {
-  if (checkForMissing(i)) {
+  if (checkForMissing() === null) {
     console.log('splicing companies',i);
 companiesArr.splice(i, 0, 'unknown');
 }
@@ -163,7 +166,7 @@ console.log('WAIT');
 
  }, 4000);
 }
- function checkForMissing(index){
+ function checkForMissing(){
 var missing = document.getElementsByClassName('search-results__result-container full-width')
    var missings = [];
    var missingLengths = [];
@@ -178,11 +181,11 @@ var missing = document.getElementsByClassName('search-results__result-container 
    missingLengths.push(word.length);
  });
 for (var i = 0; i < missingLengths.length; i++) {
-if (missingLengths[index] >= 200) {
-  console.log('true');
-return true;
+if (missingLengths[i] >= 200) {
+
+return i;
 }else {
-return false;
+  return null;
 }
 }
 
