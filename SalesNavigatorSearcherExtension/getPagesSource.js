@@ -42,9 +42,11 @@ function findNames() {
   console.log('titles',titles);
   console.log('names',names,'titlesAndCompanies', titlesAndCompanies,'locations',locations);
 
-  for (var i = 0; i < 25; i++) {
-
-  }
+  var missings = []
+for (var i = 0; i < missing.length; i++) {
+missings.push(missing[i].innerText);
+console.log('missings',missings);
+}
   for(var i = 0; i < names.length; i++) {
 
     if (i > 5 && i < 31) {
@@ -164,10 +166,6 @@ console.log('WAIT');
  }, 4000);
 
  function checkForMissing(missing){
-  var missings = []
-for (var i = 0; i < missing.length; i++) {
-missings.push(missing[i].innerText);
-console.log('missings',missings);
-}
+
 
  }
