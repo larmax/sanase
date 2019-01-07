@@ -48,7 +48,7 @@ for (var i = 0; i < missing.length; i++) {
  missings.push(missing[i].innerText);
 
 }
-var lengths = chars.map(function(word){
+missings.map(function(word){
 console.log('missing ind length', word.length);
 })
 
