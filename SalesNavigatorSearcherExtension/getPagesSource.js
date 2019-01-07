@@ -102,13 +102,13 @@ index = JSON.stringify(i);
 
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
     if (checkForMissing(i)) {
-        console.log('splicing companies');
+        console.log('splicing companies',i);
 titlesArr.splice(i, 0, 'unknown');
   }
   for(var i=0; i < companiesArr.length; i++){
     companiesArr[i] = companiesArr[i].replace(regex, "").replace(/(\r\n|\n|\r|)/gm, "").replace(/\Go to.*/,'').replace('                  ','').replace('                          ','');
     if (checkForMissing(i)) {
-      console.log('splicing companies');
+      console.log('splicing companies',i);
   companiesArr.splice(i, 0, 'unknown');
   }
   }
@@ -171,13 +171,12 @@ var missing = document.getElementsByClassName('search-results__result-container 
    var i = 0;
    missings.map(function(word){
    i++;
-   console.log(i,'missing ind length', word.length);
+
    missingLengths.push(word.length);
-
-
  });
 for (var i = 0; i < missingLengths.length; i++) {
 if (missingLengths[index] >= 200) {
+  console.log('true');
 return true;
 }else {
 return false;
