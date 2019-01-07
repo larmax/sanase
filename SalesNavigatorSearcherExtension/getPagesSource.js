@@ -38,6 +38,7 @@ function findNames() {
   var titlesAndCompanies = document.getElementsByClassName('Sans-14px-black-75%-bold')
   var locations = document.getElementsByClassName('result-lockup__misc-item')
   var titles = document.getElementsByTagName('span')
+  var missing = document.getElementsByTagName(' class="inline-flex vertical-align-middle"')
   console.log('titles',titles);
   console.log('names',names,'titlesAndCompanies', titlesAndCompanies,'locations',locations);
 
@@ -51,16 +52,15 @@ function findNames() {
     }
 
   }
-  for (var i = 0; i < locations .length; i++) {
-var location = []
- location.push(i, locations[i].innerHTML);
-location = JSON.stringify(location);
-    locationsArr.push(location)
+  for (var i = 0; i < locations.length; i++) {
+
+    locationsArr.push(locations[i])
   }
   console.log('locationsArr ',locationsArr);
 
-  for(var i = 0; i < titlesAndCompanies.length; i++) {
 
+  for(var i = 0; i < titlesAndCompanies.length; i++) {
+checkForMissing(missing);
     titlesAndCompaniesArr.push(titlesAndCompanies[i].innerHTML)
 
   }
@@ -87,7 +87,7 @@ location = JSON.stringify(location);
   var regex = /(<([^>]+)>)/ig;
   for(var i=0; i < namesArr.length; i++){
 
-index = JSON.stringify(i),'name:';
+index = JSON.stringify(i);
 
     namesArr[i] = namesArr[i].replace('Profile result - ', index)
 
@@ -162,3 +162,10 @@ console.log('WAIT');
    }, 1000);
 
  }, 4000);
+
+ function checkForMissing(missing){
+for (var i = 0; i < missing.length; i++) {
+console.log(missing[i]);
+}
+
+ }
