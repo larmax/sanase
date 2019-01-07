@@ -130,10 +130,6 @@ index = JSON.stringify(i);
     companiesArr[i] = companiesArr[i].replace(regex, "").replace(/(\r\n|\n|\r|)/gm, "").replace(/\Go to.*/,'').replace('                  ','').replace('                          ','');
 }
 
-
-
-}
-
 if (hasMissing) {
   for (var i = 0; i < theMissings.length; i++) {
     console.log('splicing titles',theMissings);
@@ -148,6 +144,7 @@ if (hasMissing) {
 
     }
 
+}
 
   console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr, 'namesArr after', namesArr, 'locationsArr after', locationsArr);
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
