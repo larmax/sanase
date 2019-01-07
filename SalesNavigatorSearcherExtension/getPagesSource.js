@@ -47,13 +47,15 @@ function findNames() {
   for(var i = 0; i < names.length; i++) {
 
     if (i > 5 && i < 31) {
-      namesArr.push(i - 5 ,names[i].innerHTML)
+      namesArr.push(names[i].innerHTML)
     }
 
   }
   for (var i = 0; i < locations .length; i++) {
 
-    locationsArr.push(i,locations[i].innerHTML)
+var location = i,locations[i].innerHTML
+location JSON.stringify(location);
+    locationsArr.push(location)
   }
   console.log('locationsArr ',locationsArr);
 
@@ -70,12 +72,12 @@ function findNames() {
 
     if (!titlesAndCompaniesArr[i].includes("<") && i > 2) {
 
-      titlesArr.push(i,titlesAndCompaniesArr[i])
+      titlesArr.push(titlesAndCompaniesArr[i])
 
     }
     if (titlesAndCompaniesArr[i].includes("Go to")) {
 
-      companiesArr.push(i,titlesAndCompaniesArr[i])
+      companiesArr.push(titlesAndCompaniesArr[i])
 
     }
 
