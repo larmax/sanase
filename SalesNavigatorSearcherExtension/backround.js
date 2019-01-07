@@ -8,7 +8,7 @@ if (response == 'save') {
 console.log('saving!');
 startSaving = false;
 }else {
-if (!output.includes(response)) {
+if (isArrayInArray(output, response)) {
 
   output.push(response)
 
@@ -19,6 +19,14 @@ if (!output.includes(response)) {
 
 
 
+}
+function isArrayInArray(out,res ){
+  var res_as_string = JSON.stringify(res);
+
+  var contains = arr.some(function(out){
+    return JSON.stringify(out) === item_as_string;
+  });
+  return contains;
 }
 uniq_fast(output)
 console.log('output',output);

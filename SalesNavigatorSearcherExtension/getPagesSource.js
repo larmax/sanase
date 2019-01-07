@@ -1,38 +1,35 @@
 var merged = [];
-function DOMtoString(document_root) {
+// function DOMtoString(document_root) {
+//
+//   var html = '',
+//   node = document_root.firstChild;
+//   while (node) {
+//     switch (node.nodeType) {
+//       case Node.ELEMENT_NODE:
+//       html += node.outerHTML;
+//       break;
+//       case Node.TEXT_NODE:
+//       html += node.nodeValue;
+//       break;
+//       case Node.CDATA_SECTION_NODE:
+//       html += '<![CDATA[' + node.nodeValue + ']]>';
+//       break;
+//       case Node.COMMENT_NODE:
+//       html += '<!--' + node.nodeValue + '-->';
+//       break;
+//       case Node.DOCUMENT_TYPE_NODE:
+//       // (X)HTML documents are identified by public identifiers
+//       html += "<!DOCTYPE " + node.name + (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '') + (!node.publicId && node.systemId ? ' SYSTEM' : '') + (node.systemId ? ' "' + node.systemId + '"' : '') + '>\n';
+//       break;
+//     }
+//     node = node.nextSibling;
+//   }
+//   return findNames(html);
+//
+//
+// }
 
-  var html = '',
-  node = document_root.firstChild;
-  while (node) {
-    switch (node.nodeType) {
-      case Node.ELEMENT_NODE:
-      html += node.outerHTML;
-      break;
-      case Node.TEXT_NODE:
-      html += node.nodeValue;
-      break;
-      case Node.CDATA_SECTION_NODE:
-      html += '<![CDATA[' + node.nodeValue + ']]>';
-      break;
-      case Node.COMMENT_NODE:
-      html += '<!--' + node.nodeValue + '-->';
-      break;
-      case Node.DOCUMENT_TYPE_NODE:
-      // (X)HTML documents are identified by public identifiers
-      html += "<!DOCTYPE " + node.name + (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '') + (!node.publicId && node.systemId ? ' SYSTEM' : '') + (node.systemId ? ' "' + node.systemId + '"' : '') + '>\n';
-      break;
-    }
-    node = node.nextSibling;
-  }
-  return findNames(html);
-
-
-}
-
-
-
-
-function findNames(html) {
+function findNames() {
   var namesArr = [];
   var titlesAndCompaniesArr = [];
   var locationsArr = [];
@@ -107,31 +104,22 @@ function findNames(html) {
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
   const  localMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
 
-if (localMerged.length < 100) {
-  console.log('WAIT not enough!');
-    setTimeout(function(){
-
-       window.scrollTo(0,100000);
-        return DOMtoString(document);
-    },4000 );
-
-
-}else {
-
+if (!localMerged.length > 100) {
   console.log('mergedlocal',localMerged);
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
 
-//   var port = chrome.runtime.connect({name: "output"});
-// port.postMessage({output: localMerged});
-// port.onMessage.addListener(function(msg) {
-//   if (msg.question == "Who's there?")
-//     port.postMessage({answer: "Madame"});
-//   else if (msg.question == "Madame who?")
-//     port.postMessage({answer: "Madame... Bovary"});
-// });
+
 
   return localMerged;
+
+}else {
+  console.log('WAIT not enough!');
+    setTimeout(function(){
+
+       window.scrollTo(0,100000);
+        DOMtoString(document);
+    },4000 );
 
 }
 
@@ -146,7 +134,7 @@ console.log('WAIT');
   }
    setTimeout(function(){
        window.scrollTo(0,100000);
-        chrome.runtime.sendMessage(DOMtoString(document));
+        chrome.runtime.sendMessage(findNames());
    }, 1000);
 
  }, 4000);
