@@ -48,8 +48,10 @@ for (var i = 0; i < missing.length; i++) {
  missings.push(missing[i].innerText);
 
 }
+var i = 0;
 missings.map(function(word){
-console.log('missing ind length', word.length);
+  i++;
+console.log(i,'missing ind length', word.length);
 })
 
 
