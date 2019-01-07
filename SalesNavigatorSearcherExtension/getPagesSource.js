@@ -1,4 +1,5 @@
 console.log('getPagesSource');
+findNames();
 var merged = [];
 // function DOMtoString(document_root) {
 //
@@ -152,15 +153,13 @@ console.log('WAIT');
  setTimeout(function(){
  },2000 );
   }
-})
-}
    setTimeout(function(){
        window.scrollTo(0,100000);
         chrome.runtime.sendMessage(findNames());
    }, 1000);
 
  }, 4000);
-
+}
  function checkForMissing(index){
 var missing = document.getElementsByClassName('search-results__result-container full-width')
    var missings = [];
