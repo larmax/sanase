@@ -46,7 +46,7 @@ function findNames() {
 for (var i = 0; i < missing.length; i++) {
   console.log(i);
 missings.push(missing[i].innerText);
-console.log('missings',missings);
+console.log('missings',i,missings);
 }
   for(var i = 0; i < names.length; i++) {
 
