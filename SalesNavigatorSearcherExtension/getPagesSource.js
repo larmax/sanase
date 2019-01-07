@@ -45,9 +45,12 @@ function findNames() {
   var missings = []
 for (var i = 0; i < missing.length; i++) {
 
-// missings.push(missing[i].innerText);
-console.log('missing ind length', missing[i].length);
+ missings.push(missing[i].innerText);
+
 }
+var lengths = chars.map(function(word){
+console.log('missing ind length', word.length);
+})
 
 
   for(var i = 0; i < names.length; i++) {
