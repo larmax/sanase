@@ -43,8 +43,8 @@ function findNames() {
   var missing = document.getElementsByClassName('search-results__result-container full-width')
      var missings = [];
      var missingLengths = [];
-     var hasMissing = []
-     var theMissing = false;
+     var hasMissing = false
+     var theMissing = 0;
      for (var i = 0; i < missing.length; i++) {
 
      missings.push(missing[i].innerText);
