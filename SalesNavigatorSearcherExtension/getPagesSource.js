@@ -124,7 +124,7 @@ index = JSON.stringify(i);
 }
 
 if (hasMissing) {
-      console.log('splicing titles',i);
+      console.log('splicing titles',theMissing);
     titlesArr.splice(theMissing, 0, 'unknown');
 }
 
@@ -134,7 +134,7 @@ if (hasMissing) {
 }
 
   if (hasMissing) {
-    console.log('splicing companies',i);
+    console.log('splicing companies',theMissing);
 companiesArr.splice(theMissing, 0, 'unknown');
 
 }
