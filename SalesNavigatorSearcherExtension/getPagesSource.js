@@ -61,7 +61,7 @@ function findNames() {
      }
    });
 
-  console.log('titles',titles);
+
   console.log('names',names,'titlesAndCompanies', titlesAndCompanies,'locations',locations);
 
 
@@ -121,22 +121,19 @@ index = JSON.stringify(i);
 
 
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
-    if (companiesArr.length < 25) {
+
 if (hasMissing) {
       console.log('splicing titles',i);
     titlesArr.splice(theMissing, 0, 'unknown');
 }
 
-      }
-
   }
   for(var i=0; i < companiesArr.length; i++){
     companiesArr[i] = companiesArr[i].replace(regex, "").replace(/(\r\n|\n|\r|)/gm, "").replace(/\Go to.*/,'').replace('                  ','').replace('                          ','');
-if (companiesArr.length < 25) {
+
   if (hasMissing) {
     console.log('splicing companies',i);
 companiesArr.splice(theMissing, 0, 'unknown');
-}
 }
 }
 
