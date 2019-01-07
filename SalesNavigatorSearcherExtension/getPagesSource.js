@@ -102,7 +102,7 @@ function findNames() {
 
   for (var i = 0; i < namesArr.length; i++) {
 
-  if (namesArr.length < titlesArr.length) {
+  if (namesArr.length > titlesArr.length) {
     console.log('namesArr length titlesArr length',namesArr.length, titlesArr.length);
     console.log('splicing names', namesArr[i]);
   titlesArr.splice(i,0,'unknown ')
@@ -111,7 +111,7 @@ function findNames() {
   }
   }
 
-  console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr, namesArr,'namesArr after', 'locationsArr after', locationsArr);
+  console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr, 'namesArr after', namesArr, 'locationsArr after', locationsArr);
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
 
 
