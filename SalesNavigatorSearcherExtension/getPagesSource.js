@@ -103,13 +103,13 @@ index = JSON.stringify(i);
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
     if (checkForMissing(i)) {
         console.log('splicing companies');
-titles.splice(i, 0, 'unknown');
+titlesArr.splice(i, 0, 'unknown');
   }
   for(var i=0; i < companiesArr.length; i++){
     companiesArr[i] = companiesArr[i].replace(regex, "").replace(/(\r\n|\n|\r|)/gm, "").replace(/\Go to.*/,'').replace('                  ','').replace('                          ','');
     if (checkForMissing(i)) {
       console.log('splicing companies');
-  titles.splice(i, 0, 'unknown');
+  companiesArr.splice(i, 0, 'unknown');
   }
   }
 
