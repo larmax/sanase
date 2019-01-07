@@ -164,8 +164,10 @@ console.log('WAIT');
  }, 4000);
 
  function checkForMissing(missing){
+  var missings = []
 for (var i = 0; i < missing.length; i++) {
-console.log(missing[i].innerText);
+missings.push(missing[i].innerText);
+console.log('missings',missings);
 }
 
  }
