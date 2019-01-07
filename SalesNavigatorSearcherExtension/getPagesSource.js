@@ -157,7 +157,7 @@ console.log('WAIT');
    }, 1000);
 
  }, 4000);
-
+}
  function checkForMissing(index){
 var missing = document.getElementsByClassName('search-results__result-container full-width')
    var missings = [];
