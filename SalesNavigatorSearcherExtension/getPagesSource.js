@@ -161,7 +161,7 @@ console.log('WAIT');
  function checkForMissing(index){
 var missing = document.getElementsByClassName('search-results__result-container full-width')
    var missings = [];
-   var missingLengths [];
+   var missingLengths = [];
    for (var i = 0; i < missing.length; i++) {
 
    missings.push(missing[i].innerText);
