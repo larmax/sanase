@@ -40,17 +40,20 @@ function findNames() {
   var titles = document.getElementsByTagName('span')
   console.log('titles',titles);
   console.log('names',names,'titlesAndCompanies', titlesAndCompanies,'locations',locations);
+
+  for (var i = 0; i < 25; i++) {
+
+  }
   for(var i = 0; i < names.length; i++) {
 
     if (i > 5 && i < 31) {
-
-      namesArr.push(names[i].innerHTML)
+      namesArr.push(i - 5 ,names[i].innerHTML)
     }
 
   }
   for (var i = 0; i < locations .length; i++) {
 
-    locationsArr.push(locations[i].innerHTML)
+    locationsArr.push(i,locations[i].innerHTML)
   }
   console.log('locationsArr ',locationsArr);
 
@@ -67,12 +70,12 @@ function findNames() {
 
     if (!titlesAndCompaniesArr[i].includes("<") && i > 2) {
 
-      titlesArr.push(titlesAndCompaniesArr[i])
+      titlesArr.push(i,titlesAndCompaniesArr[i])
 
     }
     if (titlesAndCompaniesArr[i].includes("Go to")) {
 
-      companiesArr.push(titlesAndCompaniesArr[i])
+      companiesArr.push(i,titlesAndCompaniesArr[i])
 
     }
 
