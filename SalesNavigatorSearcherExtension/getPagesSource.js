@@ -99,6 +99,13 @@ function findNames() {
     companiesArr[i] = companiesArr[i].replace(regex, "").replace(/(\r\n|\n|\r|)/gm, "").replace(/\Go to.*/,'').replace('                  ','').replace('                          ','');
 
   }
+  for (var i = 0; i < namesArr.length; i++) {
+  if (namesArr[i].includes('name:') &&   namesArr[i + 1].includes('name:') ) {
+  namesArr.splice(i,0,'unknown ')
+  namesArr.splice(i+1,0,'unknown ')
+  namesArr.splice(i+2,0,'unknown ')
+  }
+  }
 
   console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr);
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
@@ -107,13 +114,7 @@ function findNames() {
 
   const  localMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
 
-for (var i = 0; i < localMerged.length; i++) {
-if (localMerged[i].includes('name:') && localMerged[i + 1].includes('name:') ) {
-localMerged.splice(i,0,'unknown ')
-localMerged.splice(i+1,0,'unknown ')
-localMerged.splice(i+2,0,'unknown ')
-}
-}
+
 
 
 if (!localMerged.length >= 100) {
