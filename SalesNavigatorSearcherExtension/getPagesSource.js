@@ -86,7 +86,7 @@ function findNames() {
 
 
   }
-  console.log('namesArr',namesArr);
+  console.log('namesArr before ',namesArr);
   for(var i=0; i < titlesArr.length; i++){
 
 
@@ -99,6 +99,7 @@ function findNames() {
     companiesArr[i] = companiesArr[i].replace(regex, "").replace(/(\r\n|\n|\r|)/gm, "").replace(/\Go to.*/,'').replace('                  ','').replace('                          ','');
 
   }
+
   for (var i = 0; i < namesArr.length; i++) {
   if (namesArr[i].includes('name:') &&   namesArr[i + 1].includes('name:') ) {
   namesArr.splice(i,0,'unknown ')
@@ -107,7 +108,7 @@ function findNames() {
   }
   }
 
-  console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr);
+  console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr, namesArr,'namesArr after');
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
 
 
