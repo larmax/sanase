@@ -118,7 +118,7 @@ if (!localMerged.length >= 100) {
     setTimeout(function(){
 
        window.scrollTo(0,100000);
-        DOMtoString(document);
+        findNames();
     },4000 );
 
 }
