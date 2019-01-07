@@ -152,7 +152,7 @@ companiesArr.splice(theMissing, 0, 'unknown');
 
 
 
-if (!localMerged.length >= 100) {
+if (localMerged.length >= 100) {
   console.log('mergedlocal',localMerged);
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
