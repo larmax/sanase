@@ -171,23 +171,23 @@ if (!localMerged.length >= 100) {
     },4000 );
 
 }
-
-}
-
- setTimeout(function(){    window.scrollTo(0,100000);
-  var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
-  if (typeof nextButton == 'undefined') {
+setTimeout(function(){    window.scrollTo(0,100000);
+ var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
+ if (typeof nextButton == 'undefined') {
 console.log('WAIT');
- setTimeout(function(){
- },2000 );
-  }
-   setTimeout(function(){
-       window.scrollTo(0,100000);
-        chrome.runtime.sendMessage(findNames());
-   }, 1000);
+setTimeout(function(){
+},2000 );
+ }
+  setTimeout(function(){
+      window.scrollTo(0,100000);
+       chrome.runtime.sendMessage(findNames());
+  }, 1000);
 
- }, 4000);
+}, 4000);
 }
+
+
+
 //  function checkForMissing(){
 // var missing = document.getElementsByClassName('search-results__result-container full-width')
 //    var missings = [];
