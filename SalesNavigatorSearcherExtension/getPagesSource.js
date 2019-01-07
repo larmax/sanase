@@ -165,7 +165,7 @@ console.log('WAIT');
 
  function checkForMissing(missing){
 for (var i = 0; i < missing.length; i++) {
-console.log(missing[i]);
+console.log(missing[i].innerText);
 }
 
  }
