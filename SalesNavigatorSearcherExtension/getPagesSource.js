@@ -107,11 +107,14 @@ titlesArr.splice(i, 0, 'unknown');
   }
   for(var i=0; i < companiesArr.length; i++){
     companiesArr[i] = companiesArr[i].replace(regex, "").replace(/(\r\n|\n|\r|)/gm, "").replace(/\Go to.*/,'').replace('                  ','').replace('                          ','');
-    if (checkForMissing(i)) {
-      console.log('splicing companies',i);
-  companiesArr.splice(i, 0, 'unknown');
-  }
-  }
+if (companiesArr.length < 25) {
+  if (checkForMissing(i)) {
+    console.log('splicing companies',i);
+companiesArr.splice(i, 0, 'unknown');
+}
+}
+}
+
 
 
 
