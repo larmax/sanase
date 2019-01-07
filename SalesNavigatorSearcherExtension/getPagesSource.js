@@ -102,6 +102,7 @@ function findNames() {
 
   for (var i = 0; i < namesArr.length; i++) {
   if (namesArr[i].includes('name:') &&   namesArr[i + 1].includes('name:') ) {
+    console.log('splicing names', namesArr[i]);
   namesArr.splice(i,0,'unknown ')
   namesArr.splice(i+1,0,'unknown ')
   namesArr.splice(i+2,0,'unknown ')
