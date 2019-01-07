@@ -127,7 +127,7 @@ index = JSON.stringify(i);
 if (hasMissing) {
   for (var i = 0; i < theMissings.length; i++) {
     console.log('splicing titles',theMissings);
-  titlesArr.splice(theMissing[i], 0, 'unknown');
+  titlesArr.splice(theMissings[i], 0, 'unknown');
   }
 
 }
