@@ -38,21 +38,10 @@ function findNames() {
   var titlesAndCompanies = document.getElementsByClassName('Sans-14px-black-75%-bold')
   var locations = document.getElementsByClassName('result-lockup__misc-item')
   var titles = document.getElementsByTagName('span')
-  var missing = document.getElementsByClassName('search-results__result-container full-width')
+
   console.log('titles',titles);
   console.log('names',names,'titlesAndCompanies', titlesAndCompanies,'locations',locations);
 
-  var missings = []
-for (var i = 0; i < missing.length; i++) {
-
- missings.push(missing[i].innerText);
-
-}
-var i = 0;
-missings.map(function(word){
-  i++;
-console.log(i,'missing ind length', word.length);
-})
 
 
   for(var i = 0; i < names.length; i++) {
@@ -70,7 +59,8 @@ console.log(i,'missing ind length', word.length);
 
 
   for(var i = 0; i < titlesAndCompanies.length; i++) {
-checkForMissing(missing);
+
+
     titlesAndCompaniesArr.push(titlesAndCompanies[i].innerHTML)
 
   }
@@ -81,6 +71,7 @@ checkForMissing(missing);
   for (var i = 0; i < titlesAndCompaniesArr.length; i++) {
 
     if (!titlesAndCompaniesArr[i].includes("<") && i > 2) {
+
 
       titlesArr.push(titlesAndCompaniesArr[i])
 
@@ -108,25 +99,19 @@ index = JSON.stringify(i);
 
 
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
-
+    if (checkForMissing(i)) {
+        console.log('splicing companies');
+titles.splice(i, 0, 'unknown');
   }
   for(var i=0; i < companiesArr.length; i++){
-
-
     companiesArr[i] = companiesArr[i].replace(regex, "").replace(/(\r\n|\n|\r|)/gm, "").replace(/\Go to.*/,'').replace('                  ','').replace('                          ','');
-
+    if (checkForMissing(i)) {
+      console.log('splicing companies');
+  titles.splice(i, 0, 'unknown');
+  }
   }
 
-  // for (var i = 0; i < namesArr.length; i++) {
-  //
-  // if (namesArr.length > titlesArr.length) {
-  //   console.log('namesArr length titlesArr length',namesArr.length, titlesArr.length);
-  //   console.log('splicing names', namesArr[i]);
-  // titlesArr.splice(i,0,'unknown ')
-  // companiesArr.splice(i,0,'unknown ')
-  //   locationsArr.splice(i,0,'unknown ')
-  // }
-  // }
+
 
   console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr, 'namesArr after', namesArr, 'locationsArr after', locationsArr);
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
@@ -173,7 +158,28 @@ console.log('WAIT');
 
  }, 4000);
 
- function checkForMissing(missing){
+ function checkForMissing(index){
+var missing = document.getElementsByClassName('search-results__result-container full-width')
+   var missings = [];
+   var missingLengths [];
+   for (var i = 0; i < missing.length; i++) {
 
+   missings.push(missing[i].innerText);
+   }
+   var i = 0;
+   missings.map(function(word){
+   i++;
+   console.log(i,'missing ind length', word.length);
+   missingLengths.push(word.length);
+
+
+ });
+for (var i = 0; i < missingLengths.length; i++) {
+if (missingLengths[index] >= 200) {
+return true;
+}else {
+return false;
+}
+}
 
  }
