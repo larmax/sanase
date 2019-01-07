@@ -1,3 +1,4 @@
+console.log('getPagesSource');
 var merged = [];
 // function DOMtoString(document_root) {
 //
