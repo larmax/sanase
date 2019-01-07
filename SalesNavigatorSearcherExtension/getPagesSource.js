@@ -52,7 +52,7 @@ function findNames() {
      var i = -1;
      missings.map(function(word){
      i++;
-
+     console.log(i,' length',word.length);
      missingLengths.push(word.length);
      if (word.length < 200) {
        hasMissing = true;
