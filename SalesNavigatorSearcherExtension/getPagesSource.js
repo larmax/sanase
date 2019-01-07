@@ -44,7 +44,7 @@ function findNames() {
      var missings = [];
      var missingLengths = [];
      var hasMissing = false
-     var theMissing = 0;
+     var theMissings = [];
      for (var i = 0; i < missing.length; i++) {
 
      missings.push(missing[i].innerText);
@@ -55,8 +55,9 @@ function findNames() {
      console.log(i,' length',element.length);
      missingLengths.push(element.length);
      if (element.length < 250) {
+       theMissings.push(i);
        hasMissing = true;
-       theMissing = i;
+
        console.log('hasMissing',i);
      }
    });
@@ -124,8 +125,11 @@ index = JSON.stringify(i);
 }
 
 if (hasMissing) {
-      console.log('splicing titles',theMissing);
-    titlesArr.splice(theMissing, 0, 'unknown');
+  for (var i = 0; i < theMissings.length; i++) {
+    console.log('splicing titles',theMissings);
+  titlesArr.splice(theMissing[i], 0, 'unknown');
+  }
+
 }
 
 
@@ -134,8 +138,11 @@ if (hasMissing) {
 }
 
   if (hasMissing) {
-    console.log('splicing companies',theMissing);
-companiesArr.splice(theMissing, 0, 'unknown');
+    for (var i = 0; i < theMissings.length; i++) {
+      console.log('splicing companies',theMissings);
+  companiesArr.splice(theMissings[i], 0, 'unknown');
+
+    }
 
 }
 

@@ -8,8 +8,8 @@ if (response == 'save') {
 console.log('saving!');
 startSaving = false;
 }else {
-if (isArrayInArray(output, response)) {
-
+if (!isArrayInArray(output, response)) {
+console.log('fine');
   output.push(response)
 
 }else {
