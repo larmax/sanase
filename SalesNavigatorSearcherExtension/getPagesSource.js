@@ -54,7 +54,7 @@ function findNames() {
      i++;
      console.log(i,' length',element.length);
      missingLengths.push(element.length);
-     if (element.length < 250) {
+     if (element.length < 270) {
        theMissings.push(i);
        hasMissing = true;
 
