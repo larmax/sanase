@@ -104,7 +104,7 @@ function findNames() {
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
   const  localMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
 
-if (!localMerged.length => 100) {
+if (!localMerged.length >= 100) {
   console.log('mergedlocal',localMerged);
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
