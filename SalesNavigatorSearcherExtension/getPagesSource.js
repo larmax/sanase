@@ -44,7 +44,7 @@ function findNames() {
      var missings = [];
      var missingLengths = [];
      var hasMissing = []
-     var theMissing = 0;
+     var theMissing = false;
      for (var i = 0; i < missing.length; i++) {
 
      missings.push(missing[i].innerText);
@@ -123,7 +123,7 @@ index = JSON.stringify(i);
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
     if (companiesArr.length < 25) {
 if (hasMissing) {
-      console.log('splicing companies',i);
+      console.log('splicing titles',i);
     titlesArr.splice(theMissing, 0, 'unknown');
 }
 
