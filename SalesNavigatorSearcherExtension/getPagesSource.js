@@ -54,7 +54,7 @@ function findNames() {
   for (var i = 0; i < locations .length; i++) {
 var location = []
  location.push(i, locations[i].innerHTML);
-location JSON.stringify(location);
+location = JSON.stringify(location);
     locationsArr.push(location)
   }
   console.log('locationsArr ',locationsArr);
