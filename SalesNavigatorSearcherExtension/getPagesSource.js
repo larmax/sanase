@@ -2,18 +2,36 @@ var merged = [];
 
 console.log('getPagesSource');
 
+function checkType(){
+  var savedLeads = getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center').innerText;
+  console.log('savedLeads?'savedLeads);
+  if (savedLeads.includes == 'Saved leads') {
+    console.log('yes');
+return true;
+}else {
+  console.log('no');
+  return false
+}
+}
+
 var started = false;
 var gotMsg = false;
-var port = chrome.runtime.connect({name:"mycontentscript"});
-port.onMessage.addListener(function(message,sender){
-  console.log('message', message.starter);
-  if(message.starter === "start"){
-    console.log('start');
-findNames();
-  }else {
-console.log('stopped');
-  }
-});
+
+function checkStart(){
+  var port = chrome.runtime.connect({name:"mycontentscript"});
+  port.onMessage.addListener(function(message,sender){
+    console.log('message', message.starter);
+    if(message.starter === "start"){
+      console.log('start');
+  findNames();
+    }else {
+  console.log('stopped');
+    }
+  });
+
+}
+
+
 
 // function DOMtoString(document_root) {
 //
@@ -90,14 +108,21 @@ function findNames() {
   console.log('titlesAndCompaniesArr',titlesAndCompaniesArr,"length",titlesAndCompaniesArr.length,'' );
 
   companiesArr = [];
+  let exprssion = null;
   for (var i = 0; i < titlesAndCompaniesArr.length; i++) {
 
     if (i > 2) {
-if (!titlesAndCompaniesArr[i].includes("<") || titlesAndCompaniesArr[i].includes("<b>") ) {
+      if (checkType()) {
+        if (!titlesAndCompaniesArr[i].includes("<")) {
+           titlesArr.push(titlesAndCompaniesArr[i])
+        }
+        }else {
+          if (titlesAndCompaniesArr[i].includes("<b>") ) {) {
+                   titlesArr.push(titlesAndCompaniesArr[i])
+          }
+        }
+      }
 
-        titlesArr.push(titlesAndCompaniesArr[i])
-
-}
 
     }
     if (titlesAndCompaniesArr[i].includes("Go to")) {
@@ -188,7 +213,7 @@ if (merged.length >= 100 && started == true) {
     setTimeout(function(){
 
        window.scrollTo(0,100000);
-        findNames();
+    checkStart();
     },4000 );
 
 }
