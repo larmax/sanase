@@ -26,6 +26,7 @@ function checkStart(){
     if(message.starter === "start"){
       console.log('start');
   findNames();
+  started = true;
     }else {
   console.log('stopped');
     }
@@ -121,7 +122,7 @@ index = JSON.stringify(i);
 
 
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
-    if (titlesArr[i].includes('  Saved  ')) {
+    if (titlesArr[i].includes('  Saved')) {
       titlesArr.splice(index, 1);
 
 
