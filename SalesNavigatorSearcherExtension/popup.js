@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 startButton.addEventListener("click", function(){
     console.log('start');
-      var port = chrome.runtime.connect({name: 'starter'}); 
-        port.postMessage({startstop:'start'});
+
 var i = 0;
 
   var intervalId = setInterval(function(){
+    var port = chrome.runtime.connect({name: 'starter'});
+      port.postMessage({startstop:'start'});
 
-port.postMessage({startstop:'start'});
 
      if(stop){
         clearInterval(intervalId);
