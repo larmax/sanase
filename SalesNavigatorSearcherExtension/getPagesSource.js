@@ -115,7 +115,7 @@ index = JSON.stringify(i);
 
     namesArr[i] = namesArr[i].replace('Profile result - ', index)
 
-    if (titlesArr[i].includes('Premium Member')) {
+    if (namesArr[i].includes('Premium Member')) {
       console.log('includes premium member');
       titlesArr.splice(i, 1);
 
