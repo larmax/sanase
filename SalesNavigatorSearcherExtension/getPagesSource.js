@@ -91,7 +91,7 @@ function findNames() {
   companiesArr = [];
   for (var i = 0; i < titlesAndCompaniesArr.length; i++) {
 
-    if (!titlesAndCompaniesArr[i].includes("<") && i > 2) {
+    if (i > 2) {
 if (!titlesAndCompaniesArr[i].includes("<") || titlesAndCompaniesArr[i].includes("<b>") ) {
 
         titlesArr.push(titlesAndCompaniesArr[i])
