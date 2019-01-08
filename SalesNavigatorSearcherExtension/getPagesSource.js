@@ -89,9 +89,9 @@ function findNames() {
            titlesArr.push(titlesAndCompaniesArr[i])
         }
         }else {
-          if (titlesAndCompaniesArr[i].includes("<b>") ) {) {
+          if (titlesAndCompaniesArr[i].includes("<b>") ) {
                    titlesArr.push(titlesAndCompaniesArr[i])
-          }
+
         }
       }
 
