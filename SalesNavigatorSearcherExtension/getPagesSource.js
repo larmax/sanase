@@ -11,7 +11,7 @@ start = true;
 start = false;
   }
 });
-)};
+});
 
 
   if (start) {
