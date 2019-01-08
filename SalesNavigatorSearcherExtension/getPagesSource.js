@@ -15,12 +15,6 @@ console.log('stopped');
   }
 });
 
-
-
-
-
-
-
 // function DOMtoString(document_root) {
 //
 //   var html = '',
@@ -98,7 +92,9 @@ function findNames() {
   for (var i = 0; i < titlesAndCompaniesArr.length; i++) {
 
     if (!titlesAndCompaniesArr[i].includes("<") && i > 2) {
+if (!titlesAndCompaniesArr[i].includes("<") || titlesAndCompaniesArr[i].includes("<b>") ) {
 
+}
 
       titlesArr.push(titlesAndCompaniesArr[i])
 
@@ -127,7 +123,7 @@ index = JSON.stringify(i);
 
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
 }
-if (titlesArr.length < 25) {
+if (companiesArr.length < 25) {
   for (var i = 0; i < missing.length; i++) {
 
   missings.push(missing[i].innerText);
