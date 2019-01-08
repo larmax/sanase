@@ -86,22 +86,9 @@ function findNames() {
   let exprssion = null;
   for (var i = 0; i < titlesAndCompaniesArr.length; i++) {
 
-    if (i > 2) {
-      if (savedLeads.length == 1) {
-        console.log('0savedLeads.length =', savedLeads.length);
-      if (titlesAndCompaniesArr[i].includes("<b>") ) {
-        console.log('works0');
-               titlesArr.push(titlesAndCompaniesArr[i])
-        }
-        }else {
-          console.log('1savedLeads.length =', savedLeads.length);
-          if (!titlesAndCompaniesArr[i].includes("<")) {
-  console.log('works1');
-             titlesArr.push(titlesAndCompaniesArr[i])
-
-        }
-      }
-
+    if (i > 2 || !titlesAndCompaniesArr[i].includes("<")) {
+      console.log('works1');
+                 titlesArr.push(titlesAndCompaniesArr[i])
 
     }
     if (titlesAndCompaniesArr[i].includes("Go to")) {
@@ -131,13 +118,18 @@ index = JSON.stringify(i);
   for(var i=0; i < titlesArr.length; i++){
 
 
-    titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','').replace(/\n/ig, '(:(:(:');;
+    titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','').replace(/(\r\n|\n|\r)/gm,'(:(:(:');
+    console.log(titlesArr);
     if (titlesArr[i].includes('(:(:(:')) {
       console.log('includes saved');
       titlesArr.splice(i, 1);
 
 
     }
+    // if (titlesArr[i].includes('View all filters')) {
+    //   console.log('includes View all filters');
+    //   titlesArr.splice(i, 1);
+    // }
 }
 if (companiesArr.length < 25) {
   for (var i = 0; i < missing.length; i++) {
