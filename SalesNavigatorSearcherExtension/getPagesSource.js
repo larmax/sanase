@@ -2,7 +2,7 @@ var merged = [];
  window.scrollTo(0,100000);
 console.log('getPagesSource');
 var savedLeads = getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center').innerText;
-window
+
 function checkType(){
 
   console.log('savedLeads?'savedLeads);
