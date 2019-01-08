@@ -1,33 +1,20 @@
 var merged = [];
 
 console.log('getPagesSource');
-connect();
-let start = false;
-gotMsg = false;
-chrome.runtime.onConnect.addListener(function(port) {
-  console.log('test');
-  console.assert(port.name == "starter");
-port.onMessage.addListener(function(msg) {
-  if (msg.startstop == 'start') {
-    gotMsg = true;
-start = true;
-  }
-  if (msg.startstop == 'stop') {
-        gotMsg = true;
-start = false;
-  }
-});
-});
 
-if (gotMsg) {
-  if (start) {
-    console.log('started');
+var started = false;
+var gotMsg = false;
+var port = chrome.runtime.connect({name:"mycontentscript"});
+port.onMessage.addListener(function(message,sender){
+  console.log('message', message.starter);
+  if(message.starter === "start"){
+    console.log('start');
 findNames();
-}else {
+  }else {
+console.log('stopped');
+  }
+});
 
-  console.log('stopped!');
-}
-}
 
 
 
