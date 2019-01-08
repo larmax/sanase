@@ -87,17 +87,17 @@ function findNames() {
   for (var i = 0; i < titlesAndCompaniesArr.length; i++) {
 
     if (i > 2) {
-      if (!savedLeads.length == 1) {
-        console.log('1savedLeads.length =', savedLeads.length);
-        if (!titlesAndCompaniesArr[i].includes("<")) {
-console.log('works1');
-           titlesArr.push(titlesAndCompaniesArr[i])
+      if (savedLeads.length == 1) {
+        console.log('0savedLeads.length =', savedLeads.length);
+      if (titlesAndCompaniesArr[i].includes("<b>") ) {
+        console.log('works0');
+               titlesArr.push(titlesAndCompaniesArr[i])
         }
         }else {
-            console.log('0savedLeads.length =', savedLeads.length);
-          if (titlesAndCompaniesArr[i].includes("<b>") ) {
-            console.log('works0');
-                   titlesArr.push(titlesAndCompaniesArr[i])
+          console.log('1savedLeads.length =', savedLeads.length);
+          if (!titlesAndCompaniesArr[i].includes("<")) {
+  console.log('works1');
+             titlesArr.push(titlesAndCompaniesArr[i])
 
         }
       }
