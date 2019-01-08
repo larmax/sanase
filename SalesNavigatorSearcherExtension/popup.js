@@ -1,4 +1,4 @@
-
+ port = chrome.runtime.connect({name: 'starter'});
 chrome.extension.getBackgroundPage()
 chrome.tabs.executeScript(null, {
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let stop = false;
   stopButton.addEventListener("click", function(){
-      var port = chrome.runtime.connect({name: 'starter'});
+    port = chrome.runtime.connect({name: 'starter'});
     port.postMessage({startstop:'stop'});
     console.log('stop!');
     stop = true;
@@ -21,7 +21,7 @@ startButton.addEventListener("click", function(){
 var i = 0;
 
   var intervalId = setInterval(function(){
-    var port = chrome.runtime.connect({name: 'starter'});
+   port = chrome.runtime.connect({name: 'starter'});
       port.postMessage({startstop:'start'});
 
 
