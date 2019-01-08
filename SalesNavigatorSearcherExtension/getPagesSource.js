@@ -59,7 +59,7 @@ function findNames() {
   var names = document.getElementsByTagName('h3');
   var titlesAndCompanies = document.getElementsByClassName('Sans-14px-black-75%-bold')
   var locations = document.getElementsByClassName('result-lockup__misc-item')
-  var titles = document.getElementsByTagName('span')
+  
   var missing = document.getElementsByClassName('search-results__result-container full-width')
      var missings = [];
      var missingLengths = [];
