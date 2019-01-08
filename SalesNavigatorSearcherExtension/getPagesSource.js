@@ -126,6 +126,7 @@ index = JSON.stringify(i);
 
 
     }
+    console.log('titlesArr ib between', titlesArr);
     // if (titlesArr[i].includes('View all filters')) {
     //   console.log('includes View all filters');
     //   titlesArr.splice(i, 1);
