@@ -94,9 +94,9 @@ function findNames() {
     if (!titlesAndCompaniesArr[i].includes("<") && i > 2) {
 if (!titlesAndCompaniesArr[i].includes("<") || titlesAndCompaniesArr[i].includes("<b>") ) {
 
-}
+        titlesArr.push(titlesAndCompaniesArr[i])
 
-      titlesArr.push(titlesAndCompaniesArr[i])
+}
 
     }
     if (titlesAndCompaniesArr[i].includes("Go to")) {
