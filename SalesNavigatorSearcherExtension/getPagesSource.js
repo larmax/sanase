@@ -131,6 +131,7 @@ index = JSON.stringify(i);
     //   titlesArr.splice(i, 1);
     // }
 }
+titlesArr.splice(0,1);
 if (companiesArr.length < 25) {
   for (var i = 0; i < missing.length; i++) {
 
