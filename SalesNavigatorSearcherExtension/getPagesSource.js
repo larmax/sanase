@@ -122,7 +122,7 @@ index = JSON.stringify(i);
 
     }
   }
-  console.log('namesArr before ',namesArfter);
+  console.log('namesArr after ',namesArr);
   for(var i=0; i < titlesArr.length; i++){
 
 
