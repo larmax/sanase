@@ -1,6 +1,17 @@
-console.log('getPagesSource');
-findNames();
 var merged = [];
+console.log('getPagesSource');
+
+  chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
+  if (response === 'start') {
+findNames();
+}else {
+  console.log('stopped!');
+}
+
+});
+
+
+
 // function DOMtoString(document_root) {
 //
 //   var html = '',
@@ -151,22 +162,19 @@ if (hasMissing) {
 
 
 
-  const  localMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
+merged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
 
 
 
 
-if (localMerged.length >= 100) {
-  console.log('mergedlocal',localMerged);
+if (merged.length >= 100) {
+  console.log('mergedlocal',merged);
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
-
-
-
-  return localMerged;
+  return merged;
 
 }else {
-  console.log('WAIT not enough!', localMerged);
+  console.log('WAIT not enough!', merged);
     setTimeout(function(){
 
        window.scrollTo(0,100000);
