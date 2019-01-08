@@ -31,10 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
       });
 
-      if(stop){
-        clearInterval(intervalId);
-      }
-
       i++;
       console.log(i);
     // }, 1000);

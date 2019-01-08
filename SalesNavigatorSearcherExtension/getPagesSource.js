@@ -17,16 +17,17 @@ return true;
 }
 
 var started = false;
-var gotMsg = false;
+console.log('started?',started);
+
 
 function checkStart(){
   var port = chrome.runtime.connect({name:"mycontentscript"});
   port.onMessage.addListener(function(message,sender){
     console.log('message', message.starter);
     if(message.starter === "start"){
-      console.log('start');
-  findNames();
-  started = true;
+   started = true;
+    findNames();
+        console.log('started?', started);
     }else {
   console.log('stopped');
     }
@@ -86,12 +87,16 @@ function findNames() {
   for (var i = 0; i < titlesAndCompaniesArr.length; i++) {
 
     if (i > 2) {
-      if (savedLeads.length == 1) {
+      if (!savedLeads.length == 1) {
+        console.log('1savedLeads.length =', savedLeads.length);
         if (!titlesAndCompaniesArr[i].includes("<")) {
+console.log('works1');
            titlesArr.push(titlesAndCompaniesArr[i])
         }
         }else {
+            console.log('0savedLeads.length =', savedLeads.length);
           if (titlesAndCompaniesArr[i].includes("<b>") ) {
+            console.log('works0');
                    titlesArr.push(titlesAndCompaniesArr[i])
 
         }
@@ -174,33 +179,37 @@ if (hasMissing) {
   companiesArr.splice(theMissings[i], 0, 'unknown');
 
     }
+}
+  console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr, 'namesArr after', namesArr, 'locationsArr after', locationsArr);
+console.log('started?',started);
+  const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
+const newMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
+merged = newMerged;
 
+let optimalLength = 0;
+if (savedLeads === 1 ) {
+optimalLength = 96;
+}else {
+  optimalLength = 100;
 }
 
-  console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr, 'namesArr after', namesArr, 'locationsArr after', locationsArr);
-  const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
-
-
-
-merged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
-
-
-
-
-if (merged.length >= 100 && started == true) {
+if (merged.length >= optimalLength && started == true) {
   console.log('mergedlocal',merged);
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
   console.log('going to next page');
   return merged;
 }if (started === false) {
-
+console.log('merged ',merged);
 console.log('stopped');
 return merged;
 }
-}if (merged.length < 100) {
+
+if (merged.length < optimalLength) {
 
   console.log('WAIT not enough!', merged);
+}
+}
     setTimeout(function(){
 
        window.scrollTo(0,100000);
@@ -208,17 +217,17 @@ return merged;
     },4000 );
 
 
-setTimeout(function(){    window.scrollTo(0,100000);
- var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
- if (typeof nextButton == 'undefined') {
-console.log('WAIT');
-setTimeout(function(){
-},2000 );
- }
-  setTimeout(function(){
-      window.scrollTo(0,100000);
-
-  }, 1000);
-
-}, 4000);
-}
+// setTimeout(function(){    window.scrollTo(0,100000);
+//  var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
+//  if (typeof nextButton == 'undefined') {
+// console.log('WAIT');
+// setTimeout(function(){
+// },2000 );
+//  }
+//   setTimeout(function(){
+//       window.scrollTo(0,100000);
+//
+//   }, 1000);
+//
+// }, 4000);
+//
