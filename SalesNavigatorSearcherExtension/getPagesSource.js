@@ -1,5 +1,5 @@
 var merged = [];
-
+ window.scrollTo(0,100000);
 console.log('getPagesSource');
 var savedLeads = getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center').innerText;
 function checkType(){
@@ -148,6 +148,11 @@ index = JSON.stringify(i);
 
 
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
+    if (titlesArr[i].includes('  Saved  ')) {
+      titlesArr.splice(i, 1);
+
+
+    }
 }
 if (companiesArr.length < 25) {
   for (var i = 0; i < missing.length; i++) {
@@ -207,7 +212,7 @@ if (merged.length >= 100 && started == true) {
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
   return merged;
-}if (started == false) {
+}if (started === false) {
 
 console.log('stopped');
 return merged;
@@ -236,30 +241,3 @@ setTimeout(function(){
 
 }, 4000);
 }
-
-
-
-//  function checkForMissing(){
-// var missing = document.getElementsByClassName('search-results__result-container full-width')
-//    var missings = [];
-//    var missingLengths = [];
-//    for (var i = 0; i < missing.length; i++) {
-//
-//    missings.push(missing[i].innerText);
-//    }
-//    var i = 0;
-//    missings.map(function(element){
-//    i++;
-//
-//    missingLengths.push(element.length);
-//  });
-// for (var i = 0; i < missingLengths.length; i++) {
-// if (missingLengths[i] >= 200) {
-//
-// return i;
-// }else {
-//   return true;
-// }
-// }
-//
-//  }
