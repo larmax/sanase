@@ -1,8 +1,11 @@
 var merged = [];
+
 console.log('getPagesSource');
+connect();
 let start = false;
 gotMsg = false;
 chrome.runtime.onConnect.addListener(function(port) {
+  console.log('test');
   console.assert(port.name == "starter");
 port.onMessage.addListener(function(msg) {
   if (msg.startstop == 'start') {
@@ -23,7 +26,7 @@ findNames();
 }else {
 
   console.log('stopped!');
-}  
+}
 }
 
 
