@@ -126,12 +126,13 @@ index = JSON.stringify(i);
 
 
     }
-    console.log('titlesArr ib between', titlesArr);
+
     // if (titlesArr[i].includes('View all filters')) {
     //   console.log('includes View all filters');
     //   titlesArr.splice(i, 1);
     // }
 }
+console.log('titlesArr ib between', titlesArr);
 titlesArr.splice(0,1);
 if (companiesArr.length < 25) {
   for (var i = 0; i < missing.length; i++) {
