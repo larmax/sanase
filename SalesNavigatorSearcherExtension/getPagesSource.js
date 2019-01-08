@@ -46,6 +46,7 @@ console.log('stopped');
 // }
 
 function findNames() {
+  merged = [];
   var namesArr = [];
   var titlesAndCompaniesArr = [];
   var locationsArr = [];
@@ -176,7 +177,7 @@ merged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesA
 
 
 
-if (merged.length >= 100) {
+if (merged.length >= 100 && started == true) {
   console.log('mergedlocal',merged);
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
