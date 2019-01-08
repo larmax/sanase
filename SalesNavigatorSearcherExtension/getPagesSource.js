@@ -1,26 +1,31 @@
 var merged = [];
 console.log('getPagesSource');
 let start = false;
+gotMsg = false;
 chrome.runtime.onConnect.addListener(function(port) {
   console.assert(port.name == "starter");
 port.onMessage.addListener(function(msg) {
   if (msg.startstop == 'start') {
+    gotMsg = true;
 start = true;
   }
   if (msg.startstop == 'stop') {
+        gotMsg = true;
 start = false;
   }
 });
 });
 
-
+if (gotMsg) {
   if (start) {
     console.log('started');
 findNames();
 }else {
 
   console.log('stopped!');
+}  
 }
+
 
 
 
