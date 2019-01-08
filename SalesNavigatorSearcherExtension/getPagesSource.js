@@ -115,14 +115,19 @@ index = JSON.stringify(i);
 
     namesArr[i] = namesArr[i].replace('Profile result - ', index)
 
+    if (titlesArr[i].includes('Premium Member')) {
+      console.log('includes premium member');
+      titlesArr.splice(i, 1);
 
+
+    }
   }
-  console.log('namesArr before ',namesArr);
+  console.log('namesArr before ',namesArfter);
   for(var i=0; i < titlesArr.length; i++){
 
 
-    titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
-    if (titlesArr[i].includes(/(\r\n|\n|\r)/gm)) {
+    titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','').str.replace(/\n/ig, '(:(:(:');;
+    if (titlesArr[i].includes('(:(:(:') {
       console.log('includes saved');
       titlesArr.splice(i, 1);
 
