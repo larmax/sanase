@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     port.postMessage({startstop:'stop'});
     console.log('stop!');
     stop = true;
-chrome.runtime.sendMessage('save');
   });
 
 startButton.addEventListener("click", function(){
