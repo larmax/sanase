@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     starter = 'start';
     var i = 0;
 
-    var intervalId = setInterval(function(){
+    // var intervalId = setInterval(function(){
 
 
       chrome.runtime.onConnect.addListener(function(port){
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       i++;
       console.log(i);
-    }, 1000);
+    // }, 1000);
     //   function getPagesSource (){
     //   chrome.tabs.executeScript(null, {
     //
