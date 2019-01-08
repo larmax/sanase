@@ -1,3 +1,4 @@
+  var port = chrome.runtime.connect({name: 'starter'});
 chrome.extension.getBackgroundPage()
 chrome.tabs.executeScript(null, {
 
@@ -5,7 +6,7 @@ chrome.tabs.executeScript(null, {
 
 });
 document.addEventListener('DOMContentLoaded', function() {
-  var port = chrome.runtime.connect({name: 'starter'});
+
   let stop = false;
   stopButton.addEventListener("click", function(){
     port.postMessage({startstop:'stop'});
