@@ -123,6 +123,7 @@ index = JSON.stringify(i);
 
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
     if (titlesArr[i].includes('  Saved')) {
+      console.log('includes saved');
       titlesArr.splice(index, 1);
 
 
@@ -185,6 +186,7 @@ if (merged.length >= 100 && started == true) {
   console.log('mergedlocal',merged);
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
+  console.log('going to next page');
   return merged;
 }if (started === false) {
 
@@ -210,7 +212,7 @@ setTimeout(function(){
  }
   setTimeout(function(){
       window.scrollTo(0,100000);
-       chrome.runtime.sendMessage(findNames());
+
   }, 1000);
 
 }, 4000);
