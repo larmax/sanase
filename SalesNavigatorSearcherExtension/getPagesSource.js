@@ -1,7 +1,8 @@
 var merged = [];
  window.scrollTo(0,100000);
 console.log('getPagesSource');
-var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center').innerText;
+var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center');
+savedLeads = savedLeads.innerText
 console.log('savedLeads', savedLeads);
 function checkType(){
 
@@ -84,7 +85,7 @@ function findNames() {
   for (var i = 0; i < titlesAndCompaniesArr.length; i++) {
 
     if (i > 2) {
-      if (savedLeads.length === 1 ) {
+      if (savedLeads.length == 1) {
         if (!titlesAndCompaniesArr[i].includes("<")) {
            titlesArr.push(titlesAndCompaniesArr[i])
         }
