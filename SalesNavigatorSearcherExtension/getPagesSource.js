@@ -1,9 +1,9 @@
 var merged = [];
 
 console.log('getPagesSource');
-
+var savedLeads = getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center').innerText;
 function checkType(){
-  var savedLeads = getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center').innerText;
+
   console.log('savedLeads?'savedLeads);
   if (savedLeads.includes == 'Saved leads') {
     console.log('yes');
@@ -112,7 +112,7 @@ function findNames() {
   for (var i = 0; i < titlesAndCompaniesArr.length; i++) {
 
     if (i > 2) {
-      if (checkType()) {
+      if (savedLeads.length === 1 ) {
         if (!titlesAndCompaniesArr[i].includes("<")) {
            titlesArr.push(titlesAndCompaniesArr[i])
         }
@@ -207,8 +207,13 @@ if (merged.length >= 100 && started == true) {
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
   return merged;
+}if (started == false) {
 
-}else {
+console.log('stopped');
+return merged;
+}
+}if (merged.length < 100) {
+
   console.log('WAIT not enough!', merged);
     setTimeout(function(){
 
@@ -216,7 +221,7 @@ if (merged.length >= 100 && started == true) {
     checkStart();
     },4000 );
 
-}
+
 setTimeout(function(){    window.scrollTo(0,100000);
  var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
  if (typeof nextButton == 'undefined') {
