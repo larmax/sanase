@@ -117,7 +117,7 @@ index = JSON.stringify(i);
 
     if (namesArr[i].includes('Premium Member')) {
       console.log('includes premium member');
-      titlesArr.splice(i, 1);
+      namesArr.splice(i, 1);
 
 
     }
