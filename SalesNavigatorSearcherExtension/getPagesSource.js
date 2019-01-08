@@ -1,7 +1,7 @@
 var merged = [];
  window.scrollTo(0,100000);
 console.log('getPagesSource');
-var savedLeads = getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center').innerText;
+var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center').innerText;
 
 function checkType(){
 
