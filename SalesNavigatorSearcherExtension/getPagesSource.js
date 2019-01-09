@@ -120,7 +120,7 @@ index = JSON.stringify(i);
 
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
     console.log(i,titlesArr);
-    if (titlesArr[i].includes('/[^0-9a-z]/')) {
+    if (titlesArr[i].includes(/[^0-9a-z]/)) {
       console.log('includes saved',i);
       titlesArr.splice(i, 1);
 
