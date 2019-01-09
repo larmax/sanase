@@ -11,7 +11,7 @@ console.log('started?',started);
 
 function checkStart(){
   console.log('checkStart');
-  var nextButtonDisabled = document.getElementsByClassName("search-results__pagination-next-button").disabled;
+  var nextButtonDisabled = document.getElementsByClassName('search-results__pagination-next-button');
   if (!nextButtonDisabled) {
 console.log('nextButtonDisabled',nextButtonDisabled);
 
