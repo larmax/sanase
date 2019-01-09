@@ -124,33 +124,21 @@ index = JSON.stringify(i);
     .replace('amp;','')
     .replace(regex2,'Go to');
     console.log(i,titlesArr[i]);
-    // if (titlesArr[i].includes(/[^0-9a-z]/)) {
-    //   console.log('includes saved',i);
-    //   titlesArr.splice(i, 1);
-    //
-    //
-    // }
 
-
-
-    // if (titlesArr[i].includes('View all filters')) {
-    //   console.log('includes View all filters');
-    //   titlesArr.splice(i, 1);
-    // }
 }
 console.log('titlesArr in between', titlesArr);
 
 for (var i = 0; i < titlesArr.length; i++) {
-  // if ( i %2 == 0) {
-  //     titlesArr.splice(i, 1);
-  //     console.log('every other',i,titlesArr[i]);
-  // }
+
   if (titlesArr[i].includes('Go to')) {
 
-    titlesArr.splice(i, 1);
+    titlesArr.splice(i,1);
 console.log('includes Go to',i,titlesArr[i]);
   }
 }
+let newtitlesArr = titlesArr.filter(a => a !== 'Go to')
+
+
 if (companiesArr.length < 25) {
   for (var i = 0; i < missing.length; i++) {
 
