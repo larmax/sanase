@@ -127,16 +127,18 @@ index = JSON.stringify(i);
 
 }
 console.log('titlesArr in between', titlesArr);
+let newTitlesArr = [];
+for (var i = 0; i < titlesArr.length; i++) {
 
-// for (var i = 0; i < titlesArr.length; i++) {
-//
-//   if (titlesArr[i].includes('Go to')) {
-//
-//     titlesArr.splice(i,1);
-// console.log('includes Go to',i,titlesArr[i]);
-//   }
-// }
-titlesArr = titlesArr.filter(a => a !== 'Go to')
+  if (titlesArr[i].includes('Go to')) {
+
+console.log('includes Go to',i,titlesArr[i]);
+}else {
+  newTitlesArr.push(titlesArr[i]);
+  console.log('no include go to ',i,newTitlesArr[i]);
+}
+}
+let titlesArr = titlesArr.filter(a => a !== 'Go to')
 
 
 if (companiesArr.length < 25) {
