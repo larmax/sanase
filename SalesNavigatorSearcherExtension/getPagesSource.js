@@ -138,6 +138,7 @@ console.log('includes Go to',i,titlesArr[i]);
   console.log('no include go to ',i,newTitlesArr[i]);
 }
 }
+console.log('newTitlesArr', newTitlesArr);
 titlesArr = titlesArr.filter(a => a !== 'Go to')
 
 
