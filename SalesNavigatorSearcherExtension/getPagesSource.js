@@ -26,8 +26,9 @@ function checkStart(){
     console.log('message', message.starter);
     if(message.starter === "start"){
    started = true;
+   console.log('started?', started);
     findNames();
-        console.log('started?', started);
+
     }else {
   console.log('stopped');
     }
@@ -208,10 +209,12 @@ console.log('optimalLength',optimalLength);
 
 if (merged.length >= optimalLength && started == true) {
   console.log('mergedlocal',merged);
+
+ chrome.runtime.sendMessage(merged);
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
-  console.log('going to next page');
-  return merged;
+  console.log('Everything seems to be good. Going to next page');
+  checkStart();
 }if (started === false) {
 console.log('merged ',merged);
 console.log('stopped');
@@ -221,13 +224,10 @@ return merged;
 if (merged.length < optimalLength) {
 
   console.log('WAIT not enough!', merged);
+checkStart();
 }
 }
-    setTimeout(function(){
 
-       window.scrollTo(0,100000);
-    checkStart();
-    },4000 );
 
 
 // setTimeout(function(){    window.scrollTo(0,100000);
