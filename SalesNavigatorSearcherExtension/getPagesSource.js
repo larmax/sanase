@@ -139,7 +139,7 @@ console.log('includes Go to',i,titlesArr[i]);
 }
 }
 console.log('newTitlesArr', newTitlesArr);
-titlesArr = titlesArr.filter(a => a !== 'Go to')
+titlesArr = newTitlesArr;
 
 
 if (companiesArr.length < 25) {
@@ -150,6 +150,7 @@ if (companiesArr.length < 25) {
   for (var i = 0; i < missingsArr.length; i++) {
 if (!missingsArr[i].includes('at')) {
     theMissings.push(missingsArr[i]);
+    console.log('hasMissing',namesArr[i])
 }
   }
   // var i = -1;
