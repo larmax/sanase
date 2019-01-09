@@ -11,8 +11,7 @@ console.log('started?',started);
 
 function checkStart(){
   console.log('checkStart');
-  var nextButtonDisabled = document.getElementsByClassName('search-results__pagination-next-button');
-  if (!nextButtonDisabled) {
+
 console.log('nextButtonDisabled',nextButtonDisabled);
 
   var port = chrome.runtime.connect({name:"mycontentscript"});
@@ -28,9 +27,7 @@ console.log('nextButtonDisabled',nextButtonDisabled);
     }
   });
 
-}else {
-  console.log('nextButton disabled');
-}
+
 }
 
 
@@ -218,10 +215,17 @@ return merged;
 }
 
 if (merged.length < optimalLength) {
+  var nextButtonDisabled = document.getElementsByClassName('search-results__pagination-next-button');
+  if (nextButtonDisabled && merged.length >= 1) {
 
+    console.log('nextButton disabled');
+     chrome.runtime.sendMessage(merged);
+}else {
   console.log('WAIT not enough!', merged);
 checkStart();
+
 }
+
 }
 
 
