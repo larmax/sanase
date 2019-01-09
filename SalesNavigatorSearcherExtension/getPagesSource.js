@@ -135,7 +135,7 @@ index = JSON.stringify(i);
       titlesArr.splice(i, 1);
 console.log('includes Go to',i,titlesArr[i]);
     }
-    if (! i %== 2) {
+    if (! i %2 == 0) {
         titlesArr.splice(i, 1);
         console.log('every other',i,titlesArr[i]);
     }
