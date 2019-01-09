@@ -156,7 +156,7 @@ if (companiesArr.length < 25) {
     theMissings.push(i);
     hasMissing = true;
 
-    console.log('hasMissing',i);
+    console.log('hasMissing',namesArr[i]);
   }
   });
 
