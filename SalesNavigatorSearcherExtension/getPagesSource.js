@@ -118,7 +118,7 @@ index = JSON.stringify(i);
   for(var i=0; i < titlesArr.length; i++){
 
 
-    titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','').replace(/(\r\n|\n|\r)/gm,'(:(:(:');
+    titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','').replace('Saved'),'(:(:(:');
     console.log(i,titlesArr);
     if (titlesArr[i].includes('(:(:(:')) {
       console.log('includes saved');
