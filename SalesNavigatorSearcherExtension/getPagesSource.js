@@ -118,13 +118,17 @@ index = JSON.stringify(i);
   for(var i=0; i < titlesArr.length; i++){
 
 
-    titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','').replace('Saved','(:(:(:');
+    titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
     console.log(i,titlesArr);
-    if (titlesArr[i].includes('(:(:(:')) {
+    if (titlesArr[i].includes('Saved')) {
       console.log('includes saved');
       titlesArr.splice(i, 1);
 
 
+    }
+    if (titlesArr[i].includes('Go to')) {
+      console.log('includes Go to');
+      titlesArr.splice(i, 1);
     }
 
     // if (titlesArr[i].includes('View all filters')) {
