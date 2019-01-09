@@ -12,8 +12,6 @@ console.log('started?',started);
 function checkStart(){
   console.log('checkStart');
 
-console.log('nextButtonDisabled',nextButtonDisabled);
-
   var port = chrome.runtime.connect({name:"mycontentscript"});
   port.onMessage.addListener(function(message,sender){
     console.log('message', message.starter);
@@ -218,7 +216,7 @@ if (merged.length < optimalLength) {
   var nextButtonDisabled = document.getElementsByClassName('search-results__pagination-next-button');
   if (nextButtonDisabled && merged.length >= 1) {
 
-    console.log('nextButton disabled');
+    console.log('nextButton disabled, should be end of results');
      chrome.runtime.sendMessage(merged);
 }else {
   console.log('WAIT not enough!', merged);
