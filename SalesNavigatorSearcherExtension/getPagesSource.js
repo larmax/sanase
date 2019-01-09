@@ -131,7 +131,7 @@ index = JSON.stringify(i);
     //
     // }
     if (titlesArr[i].includes('Go to')) {
-      console.log('includes Go to',i);
+      console.log('includes Go to',i,titlesArr[i]);
       titlesArr.splice(i, 1);
     }
 
