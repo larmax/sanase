@@ -3,11 +3,15 @@ var merged = [];
  window.scrollTo(0,100000);
 console.log('getPagesSource');
 function nextButtonDisabled(){
+  PageButtonsArr = [];
   PageButtons = document.getElementsByClassName('search-results__pagination display-flex align-items-center');
 console.log('pageButtons',PageButtons );
-  for (var i = 0; i < PageButtons.length; i++) {
+for (var i = 0; i < PageButtons.length; i++) {
+  PageButtonsArr.push(PageButtons[i]);
+}
+  for (var i = 0; i < PageButtonsArr.length; i++) {
 
-    if (PageButtons[i].includes('next') && PageButtons[i].includes('disabled')  ) {
+    if (PageButtonsArr[i].includes('next') && PageButtonsArr[i].includes('disabled')  ) {
 return true;
 }else {
   return false;
