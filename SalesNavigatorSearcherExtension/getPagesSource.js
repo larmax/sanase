@@ -196,10 +196,12 @@ const newMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i]
 merged = newMerged;
 
 let optimalLength = 0;
-if (savedLeads === 1 ) {
+if (savedLeads.length === 1 ) {
 optimalLength = 96;
+console.log('optimalLength',optimalLength);
 }else {
   optimalLength = 100;
+  console.log('optimalLength',optimalLength);
 }
 
 if (merged.length >= optimalLength && started == true) {
