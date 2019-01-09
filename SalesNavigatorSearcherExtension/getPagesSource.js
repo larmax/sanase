@@ -118,14 +118,14 @@ index = JSON.stringify(i);
   for(var i=0; i < titlesArr.length; i++){
 
 
-    titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
+    titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','')replace(/[^0-9a-z]/,'Go to'),;
     console.log(i,titlesArr);
-    if (titlesArr[i].includes(/[^0-9a-z]/)) {
-      console.log('includes saved',i);
-      titlesArr.splice(i, 1);
-
-
-    }
+    // if (titlesArr[i].includes(/[^0-9a-z]/)) {
+    //   console.log('includes saved',i);
+    //   titlesArr.splice(i, 1);
+    //
+    //
+    // }
     if (titlesArr[i].includes('Go to')) {
       console.log('includes Go to',i);
       titlesArr.splice(i, 1);
