@@ -1,7 +1,19 @@
 var merged = [];
-  let nextButtonDisabled = document.getElementsByClassName("search-results__pagination-next-button").disabled;
+
  window.scrollTo(0,100000);
 console.log('getPagesSource');
+function nextButtonDisabled(){
+  PageButtons = document.getElementsByClassName('search-results__pagination display-flex align-items-center');
+console.log('pageButtons',PageButtons );
+  for (var i = 0; i < PageButtons.length; i++) {
+
+    if (PageButtons[i].includes('next') && PageButtons[i].includes('disabled')  ) {
+return true;
+}else {
+  return false;
+}
+  }
+}
 var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center');
 // savedLeads = savedLeads.innerText
 console.log('savedLeads', savedLeads, savedLeads.length);
@@ -216,7 +228,7 @@ return merged;
 if (merged.length < optimalLength) {
 
   console.log('nextButtonDisabled', nextButtonDisabled);
-  if (nextButtonDisabled && merged.length >= 1) {
+  if (nextButtonDisabled() && merged.length >= 1) {
 console.log(merged);
     console.log('nextButton disabled, should be end of results');
      chrome.runtime.sendMessage(merged);
