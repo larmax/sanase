@@ -138,7 +138,7 @@ console.log('includes Go to',i,titlesArr[i]);
   console.log('no include go to ',i,newTitlesArr[i]);
 }
 }
-let titlesArr = titlesArr.filter(a => a !== 'Go to')
+titlesArr = titlesArr.filter(a => a !== 'Go to')
 
 
 if (companiesArr.length < 25) {
