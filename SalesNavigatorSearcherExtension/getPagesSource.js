@@ -49,7 +49,7 @@ function findNames() {
   var locations = document.getElementsByClassName('result-lockup__misc-item')
 
   var missing = document.getElementsByClassName('search-results__result-container full-width')
-     var missingsArr = [];
+     var maybeMissingsArr = [];
      var missingLengths = [];
      var hasMissing = false
      var theMissings = [];
@@ -145,16 +145,17 @@ titlesArr = newTitlesArr;
 if (companiesArr.length < 25) {
   for (var i = 0; i < missing.length; i++) {
 
-  missingsArr.push(missing[i].innerText);
+  maybeMissingsArr.push(missing[i].innerText);
   }
-  for (var i = 0; i < missingsArr.length; i++) {
-if (!missingsArr[i].includes('at')) {
-    theMissings.push(missingsArr[i]);
+  for (var i = 0; i < maybeMissingsArr.length; i++) {
+if (!maybeMissingsArr[i].includes('at')) {
     console.log('hasMissing',namesArr[i])
+    hasMissing = true;
+    theMissings.push(i);
 }
   }
   // var i = -1;
-  // missingsArr.map(function(element){
+  // maybeMissingsArr.map(function(element){
   // i++;
   // console.log(i,' length',element.length);
   // missingLengths.push(element.length);
@@ -177,8 +178,9 @@ if (!missingsArr[i].includes('at')) {
 
 if (hasMissing) {
   for (var i = 0; i < theMissings.length; i++) {
+    companiesArr[i].replace(theMissings[i], "unknown")
     console.log('splicing titles',theMissings);
-  titlesArr.splice(theMissings[i], 0, 'unknown');
+   titlesArr.splice(theMissings[i], 0, 'unknown');
   }
 
 }
