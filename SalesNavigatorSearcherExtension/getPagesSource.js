@@ -213,9 +213,10 @@ return merged;
 }
 
 if (merged.length < optimalLength) {
-  var nextButtonDisabled = document.getElementsByClassName('search-results__pagination-next-button').disabled;
+  let nextButtonDisabled = document.getElementsByClassName('search-results__pagination-next-button').disabled;
+  console.log('nextButtonDisabled');
   if (nextButtonDisabled && merged.length >= 1) {
-console.log('merged');
+console.log(merged);
     console.log('nextButton disabled, should be end of results');
      chrome.runtime.sendMessage(merged);
 }else {
