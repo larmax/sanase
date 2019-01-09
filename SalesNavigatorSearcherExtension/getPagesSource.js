@@ -4,23 +4,17 @@ console.log('getPagesSource');
 var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center');
 // savedLeads = savedLeads.innerText
 console.log('savedLeads', savedLeads, savedLeads.length);
-function checkType(){
-
-  console.log('savedLeads?',savedLeads);
-  if (savedLeads.includes == 'Saved leads') {
-    console.log('yes');
-return true;
-}else {
-  console.log('no');
-  return false
-}
-}
-
 var started = false;
+checkStart();
 console.log('started?',started);
 
 
 function checkStart(){
+  console.log('checkStart');
+  var nextButtonDisabled = document.getElementById("search-results__pagination-next-button").disabled;
+  if (!nextButtonDisabled) {
+
+
   var port = chrome.runtime.connect({name:"mycontentscript"});
   port.onMessage.addListener(function(message,sender){
     console.log('message', message.starter);
@@ -35,7 +29,7 @@ function checkStart(){
   });
 
 }
-
+}
 
 
 
