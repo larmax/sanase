@@ -120,7 +120,7 @@ index = JSON.stringify(i);
 
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','').replace(/(\r\n|\n|\r)/gm,'(:(:(:');
     console.log(i,titlesArr);
-    if (titlesArr[i].includes('Saved')) {
+    if (titlesArr[i].includes('(:(:(:')) {
       console.log('includes saved');
       titlesArr.splice(i, 1);
 
