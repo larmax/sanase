@@ -11,7 +11,7 @@ for (var i = 0; i < PageButtons.length; i++) {
 }
   for (var i = 0; i < PageButtonsArr.length; i++) {
 
-    if (PageButtonsArr[i].includes('next') && PageButtonsArr[i].includes('disabled')  ) {
+    if (PageButtonsArr[i].indexOf('next') > -1 && PageButtonsArr[i].indexOf('disabled') > -1  ) {
 return true;
 }else {
   return false;
