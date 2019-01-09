@@ -13,7 +13,7 @@ function checkStart(){
   console.log('checkStart');
   var nextButtonDisabled = document.getElementsByClassName("search-results__pagination-next-button").disabled;
   if (!nextButtonDisabled) {
-
+console.log('nextButtonDisabled',nextButtonDisabled);
 
   var port = chrome.runtime.connect({name:"mycontentscript"});
   port.onMessage.addListener(function(message,sender){
