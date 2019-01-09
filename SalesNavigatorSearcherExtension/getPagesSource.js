@@ -143,8 +143,9 @@ console.log('includes Go to',i,titlesArr[i]);
     // }
 }
 console.log('titlesArr in between', titlesArr);
+
 for (var i = 0; i < titlesArr.length; i++) {
-  if (! i %2 == 0) {
+  if ( i %2 == 0) {
       titlesArr.splice(i, 1);
       console.log('every other',i,titlesArr[i]);
   }
