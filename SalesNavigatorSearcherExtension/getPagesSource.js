@@ -1,4 +1,5 @@
 var merged = [];
+  let nextButtonDisabled = document.getElementsByClassName("search-results__pagination-next-button").disabled;
  window.scrollTo(0,100000);
 console.log('getPagesSource');
 var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center');
@@ -213,7 +214,7 @@ return merged;
 }
 
 if (merged.length < optimalLength) {
-  let nextButtonDisabled = document.getElementsByClassName("search-results__pagination-next-button").disabled;
+
   console.log('nextButtonDisabled', nextButtonDisabled);
   if (nextButtonDisabled && merged.length >= 1) {
 console.log(merged);
