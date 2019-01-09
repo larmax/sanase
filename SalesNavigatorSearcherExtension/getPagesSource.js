@@ -213,7 +213,7 @@ return merged;
 }
 
 if (merged.length < optimalLength) {
-  let nextButtonDisabled = document.getElementsByClassName('search-results__pagination-next-button').disabled;
+  let nextButtonDisabled = document.getElementsByClassName("search-results__pagination-next-button").disabled;
   console.log('nextButtonDisabled', nextButtonDisabled);
   if (nextButtonDisabled && merged.length >= 1) {
 console.log(merged);
