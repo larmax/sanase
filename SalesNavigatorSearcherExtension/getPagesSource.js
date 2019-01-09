@@ -121,13 +121,13 @@ index = JSON.stringify(i);
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
     console.log(i,titlesArr);
     if (titlesArr[i].includes('↵              Saved↵')) {
-      console.log('includes saved');
+      console.log('includes saved',i);
       titlesArr.splice(i, 1);
 
 
     }
     if (titlesArr[i].includes('Go to')) {
-      console.log('includes Go to');
+      console.log('includes Go to',i);
       titlesArr.splice(i, 1);
     }
 
