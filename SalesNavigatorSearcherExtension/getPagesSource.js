@@ -100,7 +100,8 @@ function findNames() {
   }
 
   console.log('titlesArr berfor',titlesArr,'companiesArr before',companiesArr);
-  var regex = /(<([^>]+)>)/ig;
+  const regex = /(<([^>]+)>)/ig;
+  const regex2 = /\r?\n|\r/g;
   for(var i=0; i < namesArr.length; i++){
 
 index = JSON.stringify(i);
@@ -118,7 +119,7 @@ index = JSON.stringify(i);
   for(var i=0; i < titlesArr.length; i++){
 
 
-    titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','')replace(/[^0-9a-z]/,'Go to'),;
+    titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','')replace(regex2,'Go to'),;
     console.log(i,titlesArr);
     // if (titlesArr[i].includes(/[^0-9a-z]/)) {
     //   console.log('includes saved',i);
