@@ -227,7 +227,7 @@ return merged;
 
 if (merged.length < optimalLength) {
 
-  console.log('nextButtonDisabled', nextButtonDisabled);
+
   if (nextButtonDisabled() && merged.length >= 1) {
 console.log(merged);
     console.log('nextButton disabled, should be end of results');
