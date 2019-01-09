@@ -128,15 +128,15 @@ index = JSON.stringify(i);
 }
 console.log('titlesArr in between', titlesArr);
 
-for (var i = 0; i < titlesArr.length; i++) {
-
-  if (titlesArr[i].includes('Go to')) {
-
-    titlesArr.splice(i,1);
-console.log('includes Go to',i,titlesArr[i]);
-  }
-}
-let newtitlesArr = titlesArr.filter(a => a !== 'Go to')
+// for (var i = 0; i < titlesArr.length; i++) {
+//
+//   if (titlesArr[i].includes('Go to')) {
+//
+//     titlesArr.splice(i,1);
+// console.log('includes Go to',i,titlesArr[i]);
+//   }
+// }
+let titlesArr = titlesArr.filter(a => a !== 'Go to')
 
 
 if (companiesArr.length < 25) {
