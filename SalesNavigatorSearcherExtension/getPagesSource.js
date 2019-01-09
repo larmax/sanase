@@ -28,6 +28,8 @@ function checkStart(){
     }
   });
 
+}else {
+  console.log('nextButton disabled');
 }
 }
 
