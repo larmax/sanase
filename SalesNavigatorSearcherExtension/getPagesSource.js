@@ -9,6 +9,7 @@ console.log('pageButtons',PageButtons );
 for (var i = 0; i < PageButtons.length; i++) {
   PageButtonsArr.push(PageButtons[i]);
 }
+console.log('pageButtonsArr',pageButtonsArr);
   for (var i = 0; i < PageButtonsArr.length; i++) {
 
     if (PageButtonsArr[i].indexOf('next') > -1 && PageButtonsArr[i].indexOf('disabled') > -1  ) {
