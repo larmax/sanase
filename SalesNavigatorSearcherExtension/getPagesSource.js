@@ -120,7 +120,7 @@ index = JSON.stringify(i);
 
     titlesArr[i] = titlesArr[i].replace(regex, "").replace('amp;','');
     console.log(i,titlesArr);
-    if (titlesArr[i].includes('Saved')) {
+    if (titlesArr[i].includes('↵              Saved↵')) {
       console.log('includes saved');
       titlesArr.splice(i, 1);
 
@@ -136,7 +136,7 @@ index = JSON.stringify(i);
     //   titlesArr.splice(i, 1);
     // }
 }
-console.log('titlesArr ib between', titlesArr);
+console.log('titlesArr in between', titlesArr);
 titlesArr.splice(0,1);
 if (companiesArr.length < 25) {
   for (var i = 0; i < missing.length; i++) {
