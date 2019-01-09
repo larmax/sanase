@@ -1,4 +1,4 @@
-var merged = [];
+missingsArrvar merged = [];
  window.scrollTo(0,100000);
 console.log('getPagesSource');
 var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center');
@@ -49,7 +49,7 @@ function findNames() {
   var locations = document.getElementsByClassName('result-lockup__misc-item')
 
   var missing = document.getElementsByClassName('search-results__result-container full-width')
-     var missings = [];
+     var missingsArr = [];
      var missingLengths = [];
      var hasMissing = false
      var theMissings = [];
@@ -145,20 +145,25 @@ titlesArr = titlesArr.filter(a => a !== 'Go to')
 if (companiesArr.length < 25) {
   for (var i = 0; i < missing.length; i++) {
 
-  missings.push(missing[i].innerText);
+  missingsArr.push(missing[i].innerText);
   }
-  var i = -1;
-  missings.map(function(element){
-  i++;
-  console.log(i,' length',element.length);
-  missingLengths.push(element.length);
-  if (element.length < 278) {
-    theMissings.push(i);
-    hasMissing = true;
-
-    console.log('hasMissing',namesArr[i]);
+  for (var i = 0; i < missingsArr.length; i++) {
+if (!missingsArr[i].includes('at')) {
+    theMissings.push(missingsArr[i]);
+}
   }
-  });
+  // var i = -1;
+  // missingsArr.map(function(element){
+  // i++;
+  // console.log(i,' length',element.length);
+  // missingLengths.push(element.length);
+  // if (element.length < 278) {
+  //   theMissings.push(i);
+  //   hasMissing = true;
+  //
+  //   console.log('hasMissing',namesArr[i]);
+  // }
+  // });
 
 
 
