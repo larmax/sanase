@@ -123,7 +123,7 @@ index = JSON.stringify(i);
     .replace(regex, "")
     .replace('amp;','')
     .replace(regex2,'Go to');
-    console.log(i,titlesArr);
+    console.log(i,titlesArr[i]);
     // if (titlesArr[i].includes(/[^0-9a-z]/)) {
     //   console.log('includes saved',i);
     //   titlesArr.splice(i, 1);
