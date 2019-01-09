@@ -131,8 +131,9 @@ index = JSON.stringify(i);
     //
     // }
     if (titlesArr[i].includes('Go to')) {
-      console.log('includes Go to',i,titlesArr[i]);
+
       titlesArr.splice(i, 1);
+console.log('includes Go to',i,titlesArr[i]);
     }
 
     // if (titlesArr[i].includes('View all filters')) {
