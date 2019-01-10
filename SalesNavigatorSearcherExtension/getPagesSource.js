@@ -4,7 +4,7 @@ var merged = [];
 console.log('getPagesSource');
 function nextButtonDisabled(){
   PageButtonsArr = [];
-  PageButtons = document.getElementsByClassName('search-results__pagination display-flex align-items-center');
+  PageButtons = document.getElementsByClassName('search-results__pagination display-flex align-items-center').innerHTML;
 console.log('pageButtons',PageButtons );
 for (var i = 0; i < PageButtons.length; i++) {
   PageButtonsArr.push(PageButtons[i]);
