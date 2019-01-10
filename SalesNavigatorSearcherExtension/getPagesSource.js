@@ -124,17 +124,11 @@ index = JSON.stringify(i + 1);
 if (!namesArr[i].includes('Profile result')) {
   namesArr.splice(i, 1);
 
-}else {
+}
+  }
+  for (var i = 0; i < namesArr.length; i++) {
     namesArr[i] = namesArr[i].replace('Profile result - ', index)
     console.log('Profile result - ', index,namesArr[i]);
-}
-    // if (namesArr[i].includes('Premium Member')) {
-    //   console.log('includes premium member');
-    //
-    //   namesArr.splice(i, 1);
-    //
-    //
-    // }
   }
   console.log('namesArr after ',namesArr);
   for(var i=0; i < titlesArr.length; i++){
