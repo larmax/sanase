@@ -227,6 +227,7 @@ if (merged.length >= optimalLength && started == true) {
  chrome.runtime.sendMessage(merged);
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
+  timesRun = 0;
   console.log('Everything seems to be good. Going to next page');
   checkStart();
 }if (started === false) {
