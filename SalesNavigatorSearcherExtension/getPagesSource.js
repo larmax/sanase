@@ -252,6 +252,7 @@ console.log(merged);
      chrome.runtime.sendMessage(merged);
 }else {
   console.log('WAIT not enough!', merged);
+   window.scrollTo(0,100000);
 checkStart();
 
 }
