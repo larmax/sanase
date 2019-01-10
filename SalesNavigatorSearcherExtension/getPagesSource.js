@@ -76,7 +76,8 @@ function findNames() {
 
   for(var i = 0; i < names.length; i++) {
 
-    if (i > 5 && i < 31) {
+
+    if (i > 5 && i < 55 || !names[i].innerHTML.includes('artdeco') ) {
       namesArr.push(names[i].innerHTML)
     }
 
@@ -234,6 +235,10 @@ if (merged.length >= optimalLength && started == true) {
 }if (started === false) {
 console.log('merged ',merged);
 console.log('stopped');
+}if (merged.length >= optimalLength && nextPageButtonDisabled()) {
+  console.log(merged,timesRun);
+      console.log('nextButton disabled, should be end of results');
+       chrome.runtime.sendMessage(merged);
 }
 
 if (merged.length < optimalLength) {
