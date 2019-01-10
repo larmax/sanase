@@ -2,16 +2,24 @@ var merged = [];
 
  window.scrollTo(0,100000);
 console.log('getpagesSource');
-let pageButtonsDisabled = false;
-let  pageButtonsArr = [];
-var  pageButtons = document.getElementsByClassName('search-results__pagination-next-button');
+function nextPageButtonDisabled(){
+  let pageButtonsDisabled = false;
+  var  pageButtons = document.getElementsByClassName('search-results__pagination-next-button');
 
-console.log('pageButtons',pageButtons );
-for (var i = 0; i < pageButtons.length; i++) {
-  pageButtonsDisabled = (pageButtons[i].disabled)
-  console.log('pageButtonsDisabled',pageButtonsDisabled);
-  pageButtonsArr.push(pageButtons[i].disabled);
+  console.log('pageButtons',pageButtons );
+  for (var i = 0; i < pageButtons.length; i++) {
+    pageButtonsDisabled = (pageButtons[i].disabled)
+    console.log('pageButtonsDisabled',pageButtonsDisabled);
+
+  }
+  if (pageButtonsDisabled) {
+    return true;
+  }else {
+    return false;
+  }
+
 }
+
 
 // console.log('pageButtonsArr',pageButtonsArr);
 //   for (var i = 0; i < pageButtonsArr.length; i++) {
@@ -238,7 +246,7 @@ return merged;
 if (merged.length < optimalLength) {
 
 
-  if (pageButtonsDisabled && merged.length >= 1) {
+  if (nextPageButtonDisabled() && merged.length >= 1) {
 console.log(merged);
     console.log('nextButton disabled, should be end of results');
      chrome.runtime.sendMessage(merged);
