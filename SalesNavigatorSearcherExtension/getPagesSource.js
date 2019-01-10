@@ -77,11 +77,11 @@ function findNames() {
   for(var i = 0; i < names.length; i++) {
 
 
-    if (i > 5 && i < 55 || !names[i].innerHTML.includes('artdeco') ) {
+    if (i > 5 && i < 55) {
       namesArr.push(names[i].innerHTML)
     }
-
   }
+  console.log('namesArr before', namesArr);
   for (var i = 0; i < locations.length; i++) {
 
     locationsArr.push(locations[i].innerText)
@@ -120,16 +120,20 @@ function findNames() {
   const regex2 = /\r?\n|\r/g;
   for(var i=0; i < namesArr.length; i++){
 
-index = JSON.stringify(i);
+index = JSON.stringify(i + 1);
+if (!namesArr[i].includes('Profile result')) {
+  namesArr.splice(i, 1);
 
+}else {
     namesArr[i] = namesArr[i].replace('Profile result - ', index)
-
-    if (namesArr[i].includes('Premium Member')) {
-      console.log('includes premium member');
-      namesArr.splice(i, 1);
-
-
-    }
+}
+    // if (namesArr[i].includes('Premium Member')) {
+    //   console.log('includes premium member');
+    //
+    //   namesArr.splice(i, 1);
+    //
+    //
+    // }
   }
   console.log('namesArr after ',namesArr);
   for(var i=0; i < titlesArr.length; i++){
