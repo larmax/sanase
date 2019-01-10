@@ -8,20 +8,21 @@ var  pageButtons = document.getElementsByClassName('search-results__pagination-n
 
 console.log('pageButtons',pageButtons );
 for (var i = 0; i < pageButtons.length; i++) {
+  pageButtonsDisabled = (pageButtons[i].disabled)
   pageButtonsArr.push(pageButtons[i].disabled);
   console.log('f');
 }
 
-console.log('pageButtonsArr',pageButtonsArr);
-  for (var i = 0; i < pageButtonsArr.length; i++) {
-
-    if (pageButtonsArr[i].includes('next') && pageButtonsArr[i].includes('disabled') ) {
-      console.log(pageButtons[i]);
-pageButtonsDisabled = true;
-}else {
-  pageButtonsDisabled = false;
-}
-  }
+// console.log('pageButtonsArr',pageButtonsArr);
+//   for (var i = 0; i < pageButtonsArr.length; i++) {
+//
+//     if (pageButtonsArr[i].includes('next') && pageButtonsArr[i].includes('disabled') ) {
+//       console.log(pageButtons[i]);
+// pageButtonsDisabled = true;
+// }else {
+//   pageButtonsDisabled = false;
+// }
+//   }
 
 var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center');
 // savedLeads = savedLeads.innerText
