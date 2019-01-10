@@ -227,13 +227,13 @@ if (merged.length >= optimalLength && started == true) {
  chrome.runtime.sendMessage(merged);
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
+  console.log('timesRun',timesRun);
   timesRun = 0;
   console.log('Everything seems to be good. Going to next page');
   checkStart();
 }if (started === false) {
 console.log('merged ',merged);
 console.log('stopped');
-return merged;
 }
 
 if (merged.length < optimalLength) {
@@ -244,9 +244,11 @@ console.log(merged,timesRun);
     console.log('nextButton disabled, should be end of results');
      chrome.runtime.sendMessage(merged);
 }else {
-  console.log('WAIT not enough!', merged);
-
+  console.log('WAIT not enough!', merged,timesRun);
+setTimeout(function () {
 checkStart();
+}, 1500);
+
 
 }
 
