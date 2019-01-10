@@ -4,7 +4,7 @@ var merged = [];
 console.log('getpagesSource');
 let pageButtonsDisabled = false;
 let  pageButtonsArr = [];
-var  pageButtons = document.getElementsByClassName('search-results__pagination display-flex align-items-center');
+var  pageButtons = document.getElementsByClassName('search-results__pagination-next-button');
 
 console.log('pageButtons',pageButtons );
 for (var i = 0; i < pageButtons.length; i++) {
