@@ -9,11 +9,14 @@ var  pageButtons = document.getElementsByClassName('search-results__pagination d
 console.log('pageButtons',pageButtons );
 for (var i = 0; i < pageButtons.length; i++) {
   pageButtonsArr.push(pageButtons[i].innerHTML);
+  console.log('f');
 }
+
 console.log('pageButtonsArr',pageButtonsArr);
   for (var i = 0; i < pageButtonsArr.length; i++) {
 
     if (pageButtonsArr[i].includes('next') && pageButtonsArr[i].includes('disabled') ) {
+      console.log(pageButtons[i]);
 pageButtonsDisabled = true;
 }else {
   pageButtonsDisabled = false;
