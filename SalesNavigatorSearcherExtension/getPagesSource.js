@@ -1,25 +1,25 @@
 var merged = [];
 
  window.scrollTo(0,100000);
-console.log('getPagesSource');
-function nextButtonDisabled(){
-  PageButtonsArr = [];
-  PageButtons = document.getElementsByClassName('search-results__pagination display-flex align-items-center');
-PageButtons = PageButtons.innerHTML; 
-console.log('pageButtons',PageButtons );
-for (var i = 0; i < PageButtons.length; i++) {
-  PageButtonsArr.push(PageButtons[i]);
+console.log('getpagesSource');
+let pageButtonsDisabled = false;
+let  pageButtonsArr = [];
+var  pageButtons = document.getElementsByClassName('search-results__pagination display-flex align-items-center');
+pageButtons = pageButtons.innerHTML;
+console.log('pageButtons',pageButtons );
+for (var i = 0; i < pageButtons.length; i++) {
+  pageButtonsArr.push(pageButtons[i]);
 }
 console.log('pageButtonsArr',pageButtonsArr);
-  for (var i = 0; i < PageButtonsArr.length; i++) {
+  for (var i = 0; i < pageButtonsArr.length; i++) {
 
-    if (PageButtonsArr[i].indexOf('next') > -1 && PageButtonsArr[i].indexOf('disabled') > -1  ) {
-return true;
+    if (pageButtonsArr[i].includes('next') && pageButtonsArr[i].includes('disabled') ) {
+pageButtonsDisabled = true;
 }else {
-  return false;
+  pageButtonsDisabled = false;
 }
   }
-}
+
 var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center');
 // savedLeads = savedLeads.innerText
 console.log('savedLeads', savedLeads, savedLeads.length);
