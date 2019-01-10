@@ -5,10 +5,10 @@ console.log('getpagesSource');
 let pageButtonsDisabled = false;
 let  pageButtonsArr = [];
 var  pageButtons = document.getElementsByClassName('search-results__pagination display-flex align-items-center');
-pageButtons = pageButtons.innerHTML;
+
 console.log('pageButtons',pageButtons );
 for (var i = 0; i < pageButtons.length; i++) {
-  pageButtonsArr.push(pageButtons[i]);
+  pageButtonsArr.push(pageButtons[i].innerHTML);
 }
 console.log('pageButtonsArr',pageButtonsArr);
   for (var i = 0; i < pageButtonsArr.length; i++) {
