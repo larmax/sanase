@@ -1,5 +1,5 @@
 var merged = [];
-
+var timesRun = 0;
  window.scrollTo(0,100000);
 console.log('getpagesSource');
 function nextPageButtonDisabled(){
@@ -27,12 +27,13 @@ var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-bl
 console.log('savedLeads', savedLeads, savedLeads.length);
 var started = false;
 checkStart();
+
 console.log('started?',started);
 
 
 function checkStart(){
   console.log('checkStart');
-
+timesRun++;
   var port = chrome.runtime.connect({name:"mycontentscript"});
   port.onMessage.addListener(function(message,sender){
     console.log('message', message.starter);
@@ -237,7 +238,7 @@ return merged;
 if (merged.length < optimalLength) {
 
 
-  if (nextPageButtonDisabled() && merged.length >= 1) {
+  if (nextPageButtonDisabled() && merged.length >= 1 && timesRun => 2 ) {
 console.log(merged);
     console.log('nextButton disabled, should be end of results');
      chrome.runtime.sendMessage(merged);
