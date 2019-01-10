@@ -8,7 +8,7 @@ var  pageButtons = document.getElementsByClassName('search-results__pagination-n
 
 console.log('pageButtons',pageButtons );
 for (var i = 0; i < pageButtons.length; i++) {
-  pageButtonsArr.push(pageButtons[i].innerHTML);
+  pageButtonsArr.push(pageButtons[i].disabled);
   console.log('f');
 }
 
