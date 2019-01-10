@@ -120,15 +120,25 @@ function findNames() {
   const regex2 = /\r?\n|\r/g;
   for(var i=0; i < namesArr.length; i++){
 
-index = JSON.stringify(i + 1);
+
 if (!namesArr[i].includes('Profile result')) {
   namesArr.splice(i, 1);
+
+}    if (namesArr[i].includes('Premium Member')) {
+      console.log('includes premium member');
+      namesArr.splice(i, 1);
+
 
 }
   }
   for (var i = 0; i < namesArr.length; i++) {
+
+    index = JSON.stringify(i + 1);
+
     namesArr[i] = namesArr[i].replace('Profile result - ', index)
+
     console.log('Profile result - ', index,namesArr[i]);
+
   }
   console.log('namesArr after ',namesArr);
   for(var i=0; i < titlesArr.length; i++){
