@@ -21,16 +21,6 @@ function nextPageButtonDisabled(){
 }
 
 
-// console.log('pageButtonsArr',pageButtonsArr);
-//   for (var i = 0; i < pageButtonsArr.length; i++) {
-//
-//     if (pageButtonsArr[i].includes('next') && pageButtonsArr[i].includes('disabled') ) {
-//       console.log(pageButtons[i]);
-// pageButtonsDisabled = true;
-// }else {
-//   pageButtonsDisabled = false;
-// }
-//   }
 
 var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center');
 // savedLeads = savedLeads.innerText
@@ -48,6 +38,7 @@ function checkStart(){
     console.log('message', message.starter);
     if(message.starter === "start"){
    started = true;
+      window.scrollTo(0,100000);
    console.log('started?', started);
     findNames();
 
@@ -252,7 +243,7 @@ console.log(merged);
      chrome.runtime.sendMessage(merged);
 }else {
   console.log('WAIT not enough!', merged);
-   window.scrollTo(0,100000);
+
 checkStart();
 
 }
