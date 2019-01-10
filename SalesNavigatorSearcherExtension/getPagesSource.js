@@ -126,6 +126,7 @@ if (!namesArr[i].includes('Profile result')) {
 
 }else {
     namesArr[i] = namesArr[i].replace('Profile result - ', index)
+    console.log('Profile result - ', index,namesArr[i]);
 }
     // if (namesArr[i].includes('Premium Member')) {
     //   console.log('includes premium member');
