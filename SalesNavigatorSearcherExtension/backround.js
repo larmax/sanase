@@ -28,7 +28,7 @@ function isArrayInArray(out,res ){
   });
   return contains;
 }
-uniq_fast(output)
+
 console.log('output',output);
 
 if (output[output.length - 1] === 'end') {
