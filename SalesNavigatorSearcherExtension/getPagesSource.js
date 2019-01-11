@@ -126,9 +126,11 @@ function findNames() {
   for(var i=0; i < namesArr.length; i++){
 
 
-if (!namesArr[i].includes('Profile result')) {
+if (!namesArr[i].includes('Profile result') && typeof namerArr[i] === 'undefined') {
   namesArr.splice(i, 1);
-console.log('not a name',namesArr[i]);
+console.log('not a name',namesArr[i],i);
+}else {
+  console.log('is a name?',namesArr[i],i);
 }
 if (namesArr[i].includes('Premium Member')|| namesArr[i].includes('Premium Member')) {
       console.log('includes premium member', namesArr[i]);
