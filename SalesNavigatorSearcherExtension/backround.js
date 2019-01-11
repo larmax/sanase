@@ -36,6 +36,7 @@ startSaving(output);
 }
 
 function startSaving(output){
+  console.log('startSaving');
   document.oncopy = function(event) {
     event.clipboardData.setData('text/plain', output);
     event.preventDefault();
