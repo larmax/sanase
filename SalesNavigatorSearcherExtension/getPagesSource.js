@@ -158,7 +158,6 @@ if (namesArr[i].includes('Premium Member')|| namesArr[i].includes('Premium Membe
     .replace(regex2,'Go to');
     console.log(i,titlesArr[i]);
 
-    titlesAr[i] = titlesAr[i],
 
 }
 console.log('titlesArr in between', titlesArr);
