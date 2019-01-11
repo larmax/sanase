@@ -256,7 +256,14 @@ console.log('stopped');
 }if (merged.length >= optimalLength && nextPageButtonDisabled()) {
   console.log(merged,timesRun);
       console.log('nextButton disabled, should be end of results');
+
+if (merged.length > 100) {
+    merged.length=100;
        chrome.runtime.sendMessage(merged);
+} else {
+     chrome.runtime.sendMessage(merged);
+}
+
 }
 // if the optimal length isn't met...
 if (merged.length < optimalLength) {
