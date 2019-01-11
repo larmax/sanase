@@ -127,9 +127,9 @@ function findNames() {
 
 if (!namesArr[i].includes('Profile result')) {
   namesArr.splice(i, 1);
-
+console.log('not a name');
 }
-if (namesArr[i].includes('Premium Member')) {
+if (namesArr[i].includes('Premium Member')|| namesArr[i].includes('Premium Member')) {
       console.log('includes premium member');
       namesArr.splice(i, 1);
 
