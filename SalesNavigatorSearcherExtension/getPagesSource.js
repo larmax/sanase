@@ -264,11 +264,13 @@ console.log('stopped');
   console.log(merged,timesRun);
       console.log('nextButton disabled, should be end of results');
 
-if (merged.length > 101) {
+if (merged.length > 100) {
   console.log('too long ');
     merged.length=100;
+        merged.push('end');
        chrome.runtime.sendMessage(merged);
 } else {
+      merged.push('end');
      chrome.runtime.sendMessage(merged);
 }
 
@@ -280,7 +282,7 @@ if (merged.length < optimalLength) {
   if (nextPageButtonDisabled() && merged.length >= 1 && timesRun >= 3 ) {
 console.log(merged,timesRun);
     console.log('nextButton disabled, should be end of results');
-    merged.push('end');
+
      chrome.runtime.sendMessage(merged);
 }
 // if enough results were found, trying again.
