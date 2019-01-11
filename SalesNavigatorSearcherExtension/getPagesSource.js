@@ -132,7 +132,7 @@ console.log('not a name',namesArr[i],i);
 }else {
   console.log('is a name?',namesArr[i],i);
 }
-if (namesArr[i].includes('Premium Member')|| namesArr[i].includes('Premium Member')) {
+if (namesArr[i].includes('Premium Member')|| namesArr[i].includes('Premium Member') || namesArr[i].includes('<')) {
       console.log('includes premium member', namesArr[i]);
       namesArr.splice(i, 1);
 
