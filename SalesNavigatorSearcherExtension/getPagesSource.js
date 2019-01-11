@@ -296,6 +296,7 @@ dontStart= true;
 else {
   console.log('WAIT not enough!', merged,timesRun);
   dontStart= false;
+   window.scrollTo(0,100000);
 setTimeout(function () {
 checkStart();
 }, 1500);
