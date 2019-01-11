@@ -229,9 +229,9 @@ if (hasMissing) {
 console.log('started?',started);
 //adding prefixes to results
  namesArr = namesArr.map(i => 'name: ' + i );
- titlesArr = titlesArr.map(i => 'title' + i );
- companiesArr = companiesArr.map(i => 'Company/Organization' + i );
- locationsArr = locationsArr.map(i => 'Location' + i );
+ titlesArr = titlesArr.map(i => 'title: ' + i );
+ companiesArr = companiesArr.map(i => 'Company/Organization:' + i );
+ locationsArr = locationsArr.map(i => 'Location: ' + i );
 //merging arrays into one
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
 const newMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
