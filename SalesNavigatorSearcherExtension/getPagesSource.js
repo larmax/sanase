@@ -285,24 +285,22 @@ if (merged.length < optimalLength) {
 
 //checking if this is the final page
   if (!nextPageButtonDisabled() && !merged.length >= 1 && !timesRun >= 3 ) {
-
-     console.log('WAIT not enough!', merged,timesRun);
-     dontStart= false;
-      window.scrollTo(0,100000);
-   setTimeout(function () {
-   checkStart();
-   }, 1500);
-
+console.log(merged,timesRun);
+    console.log('nextButton disabled, should be end of results');
+        merged.push('end');
+dontStart= true;
+     chrome.runtime.sendMessage(merged);
 
 }
-
 // if enough results were found, trying again.
 else {
-  console.log(merged,timesRun);
-      console.log('nextButton disabled, should be end of results');
-          merged.push('end');
-  dontStart= true;
-       chrome.runtime.sendMessage(merged);
+  console.log('WAIT not enough!', merged,timesRun);
+  dontStart= false;
+   window.scrollTo(0,100000);
+setTimeout(function () {
+checkStart();
+}, 1500);
+
 
 }
 
