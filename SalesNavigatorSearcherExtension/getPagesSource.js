@@ -29,6 +29,7 @@ var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-bl
 // savedLeads = savedLeads.innerText
 console.log('savedLeads', savedLeads, savedLeads.length);
 var started = false;
+var dontStart = false;
 //checking if popup.js has sent a  start message
 checkStart();
 
@@ -42,7 +43,7 @@ timesRun++;
   var port = chrome.runtime.connect({name:"mycontentscript"});
   port.onMessage.addListener(function(message,sender){
     console.log('message', message.starter);
-    if(message.starter === "start"){
+    if(message.starter === "start" && !dontStart){
    started = true;
       window.scrollTo(0,100000);
    console.log('started?', started);
@@ -248,7 +249,7 @@ if (merged.length >= optimalLength && started == true) {
          started: false;
   } else {
        chrome.runtime.sendMessage(merged);
-       started: false;
+       dontStart = true;
   }
 
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
@@ -284,7 +285,7 @@ if (merged.length < optimalLength) {
   if (nextPageButtonDisabled() && merged.length >= 1 && timesRun >= 3 ) {
 console.log(merged,timesRun);
     console.log('nextButton disabled, should be end of results');
-started: false;
+dontStart= true;
      chrome.runtime.sendMessage(merged);
 
 }
