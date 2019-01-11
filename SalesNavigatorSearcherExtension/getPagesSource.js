@@ -294,6 +294,7 @@ dontStart= true;
 // if enough results were found, trying again.
 else {
   console.log('WAIT not enough!', merged,timesRun);
+  dontStart= false;
 setTimeout(function () {
 checkStart();
 }, 1500);
