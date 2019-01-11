@@ -42,5 +42,4 @@ function startSaving(output){
   };
   document.execCommand("copy", false, null);
 }
-}
 });
