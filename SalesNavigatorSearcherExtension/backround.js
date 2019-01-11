@@ -30,30 +30,14 @@ function isArrayInArray(out,res ){
 }
 uniq_fast(output)
 console.log('output',output);
-function uniq_fast(a) {
-    var seen = {};
-    var out = [];
-    var len = a.length;
-    var j = 0;
-    for(var i = 0; i < len; i++) {
-         var item = a[i];
-         if(seen[item] !== 1) {
-               seen[item] = 1;
-               out[j++] = item;
-         }
-    }
-    return out;
+
+if (output[output.length - 1] === 'end') {
+startSaving(output);
 }
-if (startSaving) {
-  console.log('saving started!');
-  // The ID of the extension we want to talk to.
-  var AppId = " bfhbipndjpokfgadlfdgeihjdhkjcdbb";
-console.log('sending to', AppId);
-  // Make a simple request:
-  chrome.runtime.sendMessage(AppId, {getTargetData: true},
-    function(response) {
-      if (targetInRange(response.targetData))
-        chrome.runtime.sendMessage(AppId, output);
-    });
+
+function startSaving(output){
+  var port = chrome.runtime.connect(laserExtensionId);
+  console.log('addListener');
+    port.postMessage({starter: starter});
+
 }
-});
