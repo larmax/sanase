@@ -241,7 +241,14 @@ console.log('optimalLength',optimalLength);
 if (merged.length >= optimalLength && started == true) {
   console.log('mergedlocal',merged);
 
- chrome.runtime.sendMessage(merged);
+  if (merged.length > 100) {
+    console.log('too long ');
+      merged.length=100;
+         chrome.runtime.sendMessage(merged);
+  } else {
+       chrome.runtime.sendMessage(merged);
+  }
+
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
   nextButton[0].click();
   console.log('timesRun',timesRun);
@@ -258,6 +265,7 @@ console.log('stopped');
       console.log('nextButton disabled, should be end of results');
 
 if (merged.length > 100) {
+  console.log('too long ');
     merged.length=100;
        chrome.runtime.sendMessage(merged);
 } else {
