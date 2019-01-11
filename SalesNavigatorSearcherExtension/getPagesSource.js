@@ -264,7 +264,7 @@ console.log('stopped');
   console.log(merged,timesRun);
       console.log('nextButton disabled, should be end of results');
 
-if (merged.length > 100) {
+if (merged.length > 101) {
   console.log('too long ');
     merged.length=100;
        chrome.runtime.sendMessage(merged);
