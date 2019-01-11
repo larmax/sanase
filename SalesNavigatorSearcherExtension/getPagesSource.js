@@ -143,7 +143,7 @@ if (namesArr[i].includes('Premium Member')|| namesArr[i].includes('Premium Membe
 
     index = JSON.stringify(i + 1);
 
-    namesArr[i] = namesArr[i].replace('Profile result - ', index)
+    namesArr[i] = namesArr[i].replace('Profile result -', index)
 
     console.log('Profile result - ', index,namesArr[i]);
 
@@ -157,6 +157,8 @@ if (namesArr[i].includes('Premium Member')|| namesArr[i].includes('Premium Membe
     .replace('amp;','')
     .replace(regex2,'Go to');
     console.log(i,titlesArr[i]);
+
+    titlesAr[i] = titlesAr[i],
 
 }
 console.log('titlesArr in between', titlesArr);
@@ -226,7 +228,11 @@ if (hasMissing) {
 }
   console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr, 'namesArr after', namesArr, 'locationsArr after', locationsArr);
 console.log('started?',started);
-
+//adding prefixes to results
+ namesArr = namesArr.map(i => 'name: ' + i );
+ titlesArr = titlesArr.map(i => 'title' + i );
+ companiesArr = companiesArr.map(i => 'Company/Organization' + i );
+ locationsArr = locationsArr.map(i => 'Location' + i );
 //merging arrays into one
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
 const newMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));

@@ -36,9 +36,11 @@ startSaving(output);
 }
 
 function startSaving(output){
-  var port = chrome.runtime.connect(laserExtensionId);
-  console.log('addListener');
-    port.postMessage({starter: starter});
-
+  document.oncopy = function(event) {
+    event.clipboardData.setData('text/plain', output);
+    event.preventDefault();
+  };
+  document.execCommand("copy", false, null);
+}
 }
 });
