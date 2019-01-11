@@ -246,10 +246,10 @@ if (merged.length >= optimalLength && started == true) {
     console.log('too long ');
       merged.length=100;
          chrome.runtime.sendMessage(merged);
-         started: false;
+
   } else {
        chrome.runtime.sendMessage(merged);
-       dontStart = true;
+
   }
 
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
@@ -272,9 +272,11 @@ if (merged.length > 100) {
     merged.length=100;
         merged.push('end');
        chrome.runtime.sendMessage(merged);
+       dontStart = true;
 } else {
 
      chrome.runtime.sendMessage(merged);
+     dontStart = true;
 }
 
 }
