@@ -126,7 +126,7 @@ function findNames() {
   for(var i=0; i < namesArr.length; i++){
 
 
-if (!namesArr[i].includes('Profile result') && typeof namerArr[i] === 'undefined') {
+if (!namesArr[i].includes('Profile result') && typeof namesArr[i] === 'undefined') {
   namesArr.splice(i, 1);
 console.log('not a name',namesArr[i],i);
 }else {
