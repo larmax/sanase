@@ -30,12 +30,12 @@ function isArrayInArray(out,res ){
 }
 
 console.log('output',output);
-
-if (output.pop() == '"end"') {
+let last_of_output == output[output.length - 1];
+if (last_of_output == '"end"') {
 startSaving(output);
-console.log('end');
+console.log('end',last_of_output);
 }else {
-  console.log('not end');
+  console.log('not end',last_of_output);
 }
 
 function startSaving(output){
