@@ -1,0 +1,13 @@
+{
+  "name": "SalesNavigatorSearcherApp",
+  "description": "My first Chrome App.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "permissions": {"fileSystem": ["write", "retainEntries", "directory"]},
+    "background": {
+      "scripts": ["backround.js"]
+    }
+  }
+
+}
