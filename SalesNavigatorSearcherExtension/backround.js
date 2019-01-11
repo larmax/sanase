@@ -33,6 +33,9 @@ console.log('output',output);
 
 if (output.pop() == 'end') {
 startSaving(output);
+console.log('end');
+}else {
+  console.log('not end');
 }
 
 function startSaving(output){
