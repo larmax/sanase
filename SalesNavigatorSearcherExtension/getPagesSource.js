@@ -188,19 +188,6 @@ if (!maybeMissingsArr[i].includes('at')) {
     theMissings.push(i);
 }
   }
-  // var i = -1;
-  // maybeMissingsArr.map(function(element){
-  // i++;
-  // console.log(i,' length',element.length);
-  // missingLengths.push(element.length);
-  // if (element.length < 278) {
-  //   theMissings.push(i);
-  //   hasMissing = true;
-  //
-  //   console.log('hasMissing',namesArr[i]);
-  // }
-  // });
-
 
 
 }
@@ -228,10 +215,10 @@ if (hasMissing) {
   console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr, 'namesArr after', namesArr, 'locationsArr after', locationsArr);
 console.log('started?',started);
 //adding prefixes to results
- namesArr = namesArr.map(i => 'name: ' + i );
- titlesArr = titlesArr.map(i => 'title: ' + i );
- companiesArr = companiesArr.map(i => 'Company/Organization:' + i );
- locationsArr = locationsArr.map(i => 'Location: ' + i );
+ namesArr = namesArr.map(i => '*name: ' + i );
+ titlesArr = titlesArr.map(i => '*title: ' + i );
+ companiesArr = companiesArr.map(i => '*Company/Organization: ' + i );
+ locationsArr = locationsArr.map(i => '*Location: ' + i );
 //merging arrays into one
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
 const newMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
