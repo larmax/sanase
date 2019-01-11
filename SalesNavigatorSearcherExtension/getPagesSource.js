@@ -245,8 +245,10 @@ if (merged.length >= optimalLength && started == true) {
     console.log('too long ');
       merged.length=100;
          chrome.runtime.sendMessage(merged);
+         started: false;
   } else {
        chrome.runtime.sendMessage(merged);
+       started: false;
   }
 
   var nextButton = document.getElementsByClassName('search-results__pagination-next-button')
@@ -270,7 +272,7 @@ if (merged.length > 100) {
         merged.push('end');
        chrome.runtime.sendMessage(merged);
 } else {
-      merged.push('end');
+
      chrome.runtime.sendMessage(merged);
 }
 
@@ -282,8 +284,9 @@ if (merged.length < optimalLength) {
   if (nextPageButtonDisabled() && merged.length >= 1 && timesRun >= 3 ) {
 console.log(merged,timesRun);
     console.log('nextButton disabled, should be end of results');
-
+started: false;
      chrome.runtime.sendMessage(merged);
+
 }
 // if enough results were found, trying again.
 else {
