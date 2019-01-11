@@ -31,7 +31,7 @@ function isArrayInArray(out,res ){
 
 console.log('output',output);
 
-if (output.pop() == 'end') {
+if (output.pop() == '"end"') {
 startSaving(output);
 console.log('end');
 }else {
