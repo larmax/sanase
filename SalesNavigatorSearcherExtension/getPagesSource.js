@@ -268,7 +268,7 @@ if (merged.length > 100) {
        chrome.runtime.sendMessage(merged);
        dontStart = true;
 } else {
-
+        merged.push('end');
      chrome.runtime.sendMessage(merged);
      dontStart = true;
 }
