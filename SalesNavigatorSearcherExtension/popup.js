@@ -10,13 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     stop = true;
   });
-  stopSaveButton.addEventListener("click", function(){
-    console.log('stop! and save!');
-    starter = 'stopSave';
-
-    stop = true;
-  });
-
 
   startButton.addEventListener("click", function(){
     console.log('start');
