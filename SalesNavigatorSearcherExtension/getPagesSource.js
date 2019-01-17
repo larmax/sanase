@@ -156,7 +156,7 @@ if (/^\s/.test(namesArr[i])) {
 }else {
   console.log('first indexok');
 }
-  namesArr[i] = namesArr[i].replace(/\s/,'*LN: ')
+  namesArr[i] = namesArr[i].replace(/\s/,'* ')
 
     }
 
@@ -227,10 +227,10 @@ if (hasMissing) {
   console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr, 'namesArr after', namesArr, 'locationsArr after', locationsArr);
 console.log('started?',started);
 //adding prefixes to results
- namesArr = namesArr.map(i => '*FN: ' + i );
- titlesArr = titlesArr.map(i => '*T: ' + i );
- companiesArr = companiesArr.map(i => '*C: ' + i );
- locationsArr = locationsArr.map(i => '*L: ' + i );
+ namesArr = namesArr.map(i => '\n * ' + i );
+ titlesArr = titlesArr.map(i => '* ' + i );
+ companiesArr = companiesArr.map(i => '* ' + i );
+ locationsArr = locationsArr.map(i => '* ' + i );
 //merging arrays into one
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
 const newMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
