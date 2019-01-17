@@ -46,5 +46,7 @@ function startSaving(output){
     event.preventDefault();
   };
   document.execCommand("copy", false, null);
+
 }
+
 });

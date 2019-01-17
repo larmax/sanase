@@ -145,9 +145,21 @@ if (namesArr[i].includes('Premium Member')|| namesArr[i].includes('Premium Membe
 
     namesArr[i] = namesArr[i].replace('Profile result -', index)
 
-    console.log('Profile result - ', index,namesArr[i]);
 
-  }
+    console.log('Profile result - ', index,namesArr[i]);
+      console.log('slicing',namesArr[i],typeof namesArr[i]);
+      namesArr[i] = namesArr[i].slice(9);
+        namesArr[i] = namesArr[i].slice(0,-5);
+if (/^\s/.test(namesArr[i])) {
+  console.log('slicing again',namesArr[i] );
+    namesArr[i] = namesArr[i].slice(1);
+}else {
+  console.log('first indexok');
+}
+  namesArr[i] = namesArr[i].replace(/\s/,'*LN: ')
+
+    }
+
   console.log('namesArr after ',namesArr);
   for(var i=0; i < titlesArr.length; i++){
 
@@ -215,10 +227,10 @@ if (hasMissing) {
   console.log('titlesArr after',titlesArr,'companiesArr after',companiesArr, 'namesArr after', namesArr, 'locationsArr after', locationsArr);
 console.log('started?',started);
 //adding prefixes to results
- namesArr = namesArr.map(i => '*name: ' + i );
- titlesArr = titlesArr.map(i => '*title: ' + i );
- companiesArr = companiesArr.map(i => '*Company/Organization: ' + i );
- locationsArr = locationsArr.map(i => '*Location: ' + i );
+ namesArr = namesArr.map(i => '*FN: ' + i );
+ titlesArr = titlesArr.map(i => '*T: ' + i );
+ companiesArr = companiesArr.map(i => '*C: ' + i );
+ locationsArr = locationsArr.map(i => '*L: ' + i );
 //merging arrays into one
   const l = Math.min(namesArr.length, titlesArr.length, companiesArr.length, locationsArr.length);
 const newMerged = ([].concat(...Array.from({ length: l }, (_, i) => [namesArr[i], titlesArr[i],companiesArr[i],locationsArr[i]]), namesArr.slice(l), titlesArr.slice(l), companiesArr.slice(l),locationsArr.slice(l)));
