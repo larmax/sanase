@@ -124,10 +124,7 @@ function findNames() {
   const regex = /(<([^>]+)>)/ig;
   const regex2 = /\r?\n|\r/g;
   for(var i=0; i < namesArr.length; i++){
-if (namesArr[i] === "") {
-    namesArr.splice(i, 1);
-    console.log('nothing here');
-}
+
 
 if (!namesArr[i].includes('Profile result') && typeof namesArr[i] === 'undefined') {
   namesArr.splice(i, 1);
@@ -142,7 +139,10 @@ if (namesArr[i].includes('Premium Member')|| namesArr[i].includes('Premium Membe
 }
   }
   for (var i = 0; i < namesArr.length; i++) {
-
+    if (namesArr[i] === "") {
+        namesArr.splice(i, 1);
+        console.log('nothing here');
+    }
     index = JSON.stringify(i + 1);
 
     namesArr[i] = namesArr[i].replace('Profile result -', index)
