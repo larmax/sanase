@@ -159,8 +159,12 @@ if (/^\s/.test(namesArr[i])) {
   console.log('first indexok');
 }
   namesArr[i] = namesArr[i].replace(/\s/,'* ')
+if (!namesArr[i].match(/[a-z]/g)) {
+  namesArr.splice(i, 1);
 
+}
     }
+
 
   console.log('namesArr after ',namesArr);
   for(var i=0; i < titlesArr.length; i++){
