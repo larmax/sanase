@@ -160,6 +160,7 @@ if (/^\s/.test(namesArr[i])) {
 }
   namesArr[i] = namesArr[i].replace(/\s/,'* ')
 if (!namesArr[i].match(/[a-z]/g)) {
+  console.log(no alphanumerics!!,namesArr[i]);
   namesArr.splice(i, 1);
 
 }
