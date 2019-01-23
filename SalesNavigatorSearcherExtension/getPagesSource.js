@@ -319,6 +319,7 @@ dontStart= true;
 
    window.scrollTo(0,100000);
 setTimeout(function () {
+   window.scrollTo(0,0);
 checkStart();
 }, 1500);
 
