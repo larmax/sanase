@@ -1,0 +1,94 @@
+firstleettewr	last	full	title	comapny	location	domain	email
+Doug	Schulte	Doug Schulte	Business Development Manager	Morris Group  Inc 	Huntsville  Alabama Area 	morrisgroupinc.com	dschulte@morrisgroupinc.com
+Katelyn	White	Katelyn White	Salesforce Administrator	Morris Group  Inc 	Hartford  Connecticut Area 	morrisgroupinc.com	kwhite@morrisgroupinc.com
+Kathryn	Rhodes	Kathryn Rhodes	Marketing Coordinator	Morris Group  Inc 	Hartford  Connecticut Area 	morrisgroupinc.com	krhodes@morrisgroupinc.com
+Michael	Tierney	Michael Tierney	Director of Sales Development	Morris Group  Inc 	Greater New York City Area 	morrisgroupinc.com	mtierney@morrisgroupinc.com
+							
+Jindrich	Svec	Jindrich Svec	Head of B2B	innogy SE	Czech Republic 	innogy.com	jindrich.svec@innogy.com
+						innogy.com	
+Wojciech	Wiechowski	Wojciech Wiechowski	Head of Business Development Americas  Offshore Wind	innogy SE	Swindon  United Kingdom 	innogy.com	wojciech.wiechowski@innogy.com
+							
+Leslie	Kranz	Leslie Kranz	Marketing Events Manager	TMW Systems	Cleveland Akron  Ohio Area 	tmwsystems.com	leslie.kranz@tmwsystems.com
+Betty	van Es	Betty van Es	Events Manager   x2F  EA	TomTom	Amsterdam Area  Netherlands 	tomtom.com	betty.vanes@tomtom.com
+							
+Rene	Kuiper	Rene Kuiper	Head Of Sales Operations	TIBCO	Sydney  Australia 	tibco.com	rkuiper@tibco.com
+William	Bennett	William Bennett	Director  Sales Operations	TIBCO	Greater New York City Area 	tibco.com	wbennett@tibco.com
+Sara	Parrish	Sara Parrish	Global Events Manager	TIBCO	San Francisco Bay Area 	tibco.com	sparrish@tibco.com
+Rosemary	Guy  CMP	Rosemary Guy  CMP	Global Events and Tradeshow Manager	TIBCO	San Francisco Bay Area 	tibco.com	rguy..cmp@tibco.com
+Mick	Charles	Mick Charles	Vice President  Head of Sales   Americas East	TIBCO	Raleigh Durham  North Carolina Area 	tibco.com	mcharles@tibco.com
+Mark	Bannon	Mark Bannon	Vice President Global Sales  Advanced Analytics  &  Data Science	TIBCO	Greater Boston Area 	tibco.com	mbannon@tibco.com
+David	Hayward	David Hayward	Vice President Sales Operations	TIBCO	Greater Atlanta Area 	tibco.com	dhayward@tibco.com
+Vincent	Peters	Vincent Peters	VP  Global Head of Sales OEM and Strategic Partners	TIBCO	Tilburg Area  Netherlands 	tibco.com	vpeters@tibco.com
+Piotr	Lukasiewicz	Piotr Lukasiewicz	Sales Efficiency Management Unit Manager	T Mobile	Warsaw  Masovian District  Poland 	t-mobile.com	piotr.lukasiewicz@t-mobile.com
+Maria	Zesch	Maria Zesch	Chief Commercial Officer B2B and Digitalisation	T Mobile	Austria area 	t-mobile.com	maria.zesch@t-mobile.com
+Brad	Nash	Brad Nash	VP  Area Field Sales  Retail and Direct Channels	T Mobile	Greater Atlanta Area 	t-mobile.com	brad.nash@t-mobile.com
+Rich	Garwood	Rich Garwood	Senior Vice President of Sales   Northwest Region	T Mobile	San Francisco Bay Area 	t-mobile.com	rich.garwood@t-mobile.com
+Robert	Hildebrand	Robert Hildebrand	Vp Sales Operations Services	T Mobile	Greater Seattle Area 	t-mobile.com	robert.hildebrand@t-mobile.com
+#VALUE!	#VALUE!						
+begin 2	#VALUE!						
+Brigette	Jackson	Brigette Jackson	Director Sales  &  Operations	T Mobile	Greater Atlanta Area 		brigette.jackson@
+							
+Sean	Leonard	Sean Leonard	Salesforce Administrator	Toast  Inc 	Greater Boston Area 		
+Tamara	Portman	Tamara Portman	Event Marketing Manager	Toast  Inc 	Greater Boston Area 		
+Riley	Smith	Riley Smith	Salesforce Administrator	Toast  Inc 	Greater Boston Area 		
+Andrew	McDowell	Andrew McDowell	Salesforce Administrator	Toast  Inc 	Greater Boston Area 		
+Jenna	Ricci	Jenna Ricci	Sr  Salesforce Administrator	Brown University	Providence  Rhode Island Area 		
+Rick	Lamy	Rick Lamy	Vice President  Sales	Toast  Inc 	Wilmington  North Carolina Area 		
+Sarah	Steele	Sarah Steele	Events Manager	Tobii Dynavox	Greater Pittsburgh Area 		
+Stephanie	Williams	Stephanie Williams	Marketing Manager	Tobii Dynavox	Greater Pittsburgh Area 		
+Jeri	Lynn Hoffman	Jeri Lynn Hoffman	Sales Operations Specialist	Tobii Dynavox	Cleveland Akron  Ohio Area 		
+Kathleen	Geraghty	Kathleen Geraghty	Vice President  Sales	ToolsGroup	Greater Chicago Area 		
+Angela	Iorio	Angela Iorio	Regional Marketing Manager   Italy	ToolsGroup	Milan Area  Italy 		
+Mechell	Hanegraaf Baradillo	Mechell Hanegraaf Baradillo	Salesforce Business Support Administrator	TomTom	Amsterdam Area  Netherlands 		
+Phil	Allen	Phil Allen	VP Sales APAC	TomTom	Auckland  New Zealand 		
+Danny	Grobben	Danny Grobben	VP Sales   TomTom Automotive Greater Detroit Area 				
+Elodie	GUIROUX	Elodie GUIROUX	Global Events Manager	TomTom	Amsterdam Area  Netherlands 		
+Anouk	Stoof	Anouk Stoof	Head of Global Events   TomTom	TomTom	Amsterdam Area  Netherlands 		
+Vernon	Bonser	Vernon Bonser	Head Of Corporate Sales UK  &  ROI	TomTom Telematics	Milton Keynes  United Kingdom 		
+Paul	Hohos	Paul Hohos	Vice President Automotive Sales   x2F  Managing Director  Americas	TomTom	Fort Myers  Florida Area 		
+Matt	Gunzenhaeuser	Matt Gunzenhaeuser	Director of Business Development   US  &  Canada	TomTom Telematics	Columbus  Ohio Area 		
+Klaus	L tkemeier	Klaus L tkemeier					
+Francesco	Stolfo	Francesco Stolfo	Partner   VP Business Development	ToolsGroup	Milan Area  Italy 		
+Ricard	Pascual	Ricard Pascual	Sales  &  Marketing Director	ToolsGroup	Barcelona Area  Spain 		
+Jonathan	Cohan	Jonathan Cohan	Director of Marketing	ToolsGroup	Greater Boston Area 	end	
+#VALUE!	#VALUE!						
+Lorenzo	Trucco	Lorenzo Trucco	Southern Europe Head of Sales	ToolsGroup	Milan Area  Italy 		
+Enric	Parera	Enric Parera	Southern Europe Managing Director	ToolsGroup	Spain 		
+Anastasia	Baranova	Anastasia Baranova	Marketing Manager	Total	Moscow  Russian Federation 		
+Mahmoud	Ujaimi	Mahmoud Ujaimi	B2B Marketing Manager	Total	Saudi Arabia 		
+#VALUE!	#VALUE!						
+St	phanie S 	St phanie S 	Head of Corporate Events	Total	Paris Area  France 		
+Mustapha	NAIT KARROUM	Mustapha NAIT KARROUM	B2B Sales  &  Marketing Director	Total	Guinea 		
+Jim	Reynolds	Jim Reynolds	CEO	Total Comfort Solutions	Columbia  South Carolina Area 		
+Kelly	Allison	Kelly Allison	Head Of Marketing  &  Comms   Business Services  Consultancy  Consumer Services  amp   	Transguard Group	United Arab Emirates 		
+Will	Baines	Will Baines	Commercial Director	Transguard Group	United Arab Emirates 		
+Becky	Sowerby	Becky Sowerby	Head of Sales Support	Transguard Group	United Arab Emirates 		
+Mikko	Jarvinen	Mikko Jarvinen	Vice President Sales EMEA	Trustwave	London  United Kingdom 		
+Andreas	Deliandreadis	Andreas Deliandreadis	VP Sales Europe Other 				
+Steve	Stump	Steve Stump	VP of Sales	Trustwave	Greater New York City Area 		
+Katie	R 	Katie R 	Salesforce Administrator	Trustwave	Greater Chicago Area 		
+Stephen	S  Andekian	Stephen S  Andekian	Director of Marketing  Web Services	Trustwave	Greater Milwaukee Area 		
+Tim	Wolter	Tim Wolter	Vice President of Sales  Southeast US	Trustwave	Charlotte  North Carolina Area 		
+Linda	Smith	Linda Smith	Sales Operations Manager Washington D C  Metro Area 				
+Christine	Woodman	Christine Woodman	Sales Operations Manager	Trustwave	Reading  United Kingdom 		
+Julie	Vickery	Julie Vickery	Events and Marketing Manager	Trustwave	Greater Denver Area 		
+Neil	Batstone	Neil Batstone	Vice President Sales  EMEA	Trustwave	London  United Kingdom 		
+Allan	Peters	Allan Peters	Senior Vice President Worldwide Sales	Trustwave	Greater Denver Area 		
+Christopher	J  Harwood	Christopher J  Harwood	Vice President   Sales	Trustwave	San Francisco Bay Area 		
+Ronald	Walcott	Ronald Walcott	Chief Executive Officer	Telecommunications Services of Trinidad   Tobago Limited  TSTT 	Trinidad and Tobago 		
+Rhonda	Lee Yhapp	Rhonda Lee Yhapp	Head Marketing Communications	Telecommunications Services of Trinidad   Tobago Limited  TSTT 	Trinidad and Tobago 	end	
+#VALUE!	#VALUE!						
+Lorraine	Steele	Lorraine Steele	Senior Manager  Commercial Marketing	Telecommunications Services of Trinidad   Tobago Limited  TSTT 	Trinidad and Tobago 		
+Joel	Mapp	Joel Mapp	Sales Support Manager	Telecommunications Services of Trinidad   Tobago Limited  TSTT 	Trinidad and Tobago 		
+Rashida	Jolivet  MBA	Rashida Jolivet  MBA	Sales Director	TurnKey Vacation Rentals	Houston  Texas Area 		
+Liz	Stark	Liz Stark	Field Operations Lead	TurnKey Vacation Rentals	Corpus Christi  Texas Area 		
+Kelleyanne	Dove	Kelleyanne Dove	Sales Director  x2F GM Napa  x2F Sonoma  x2F Marin	TurnKey Vacation Rentals	San Francisco Bay Area 		
+Karen	Keys	Karen Keys	Director of Sales	TurnKey Vacation Rentals	Charleston  South Carolina Area 		
+Matthew	Nikolajevic	Matthew Nikolajevic	Regional Director of Sales and Operations	TurnKey Vacation Rentals	Austin  Texas Area 		
+Chelsea	Vernon	Chelsea Vernon	Sales Director	TurnKey Vacation Rentals	Myrtle Beach  South Carolina Area 		
+Jason	Everson	Jason Everson	Vice President Of Operations	TurnKey Vacation Rentals	Austin  Texas Area 		
+Joseph	Mathews	Joseph Mathews	Director of Sales	TurnKey Vacation Rentals	Austin  Texas Area 		
+Alison	M  Lindsey	Alison M  Lindsey	Director of Sales	TurnKey Vacation Rentals	Greater Denver Area 		
+Brian	Megless	Brian Megless	VP of Marketing	TurnKey Vacation Rentals	Austin  Texas Area 		
+TJ	 Clark	TJ  Clark	Co Founder  &  CEO	TurnKey Vacation Rentals	Austin  Texas Area 		
+					end		
