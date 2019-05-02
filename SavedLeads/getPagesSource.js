@@ -128,7 +128,7 @@ function findNames() {
     }else {
       console.log("goodlengthres");
     }
-    namesTitleArr[i] = namesTitleArr[i].replace("* *","*").replace("** ","*").replace("*  *","*");
+    namesTitleArr[i] = namesTitleArr[i].replace("	","").replace("* *","*").replace("**","*").replace("*  *","*");
   }
 
   console.log("adding prefixes to results");
@@ -152,6 +152,7 @@ function findNames() {
   }
   // checking if everything is ok and proceeding to the next page
   if (merged.length >= optimalLength && started == true) {
+    console.log("merged,length",merged.length);
     console.log('mergedlocal',merged);
 
     if (merged.length > 25 || !nextPageButtonDisabled()) {
@@ -218,7 +219,7 @@ if (nextPageButtonDisabled()) {
   }
   // if the optimal length isn't met...
   if (merged.length < optimalLength) {
-
+console.log("merged,length",merged.length);
     //checking if this is the final page
     if (!nextPageButtonDisabled() && !merged.length >= 1 && !timesRun >= 3 ) {
       console.log(merged,timesRun);
