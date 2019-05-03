@@ -1,6 +1,7 @@
 var merged = [];
 var timesRun = 0;
 var sent = false;
+var clicked = false;
 // scrolling page to bottom in order to have all results visible
 window.scrollTo(0,100000);
 console.log('getpagesSource');
@@ -26,6 +27,7 @@ function nextPageButtonDisabled(){
 
 }
 // checking if this is a saved Leads / accounts page
+
 var savedLeads = document.getElementsByClassName('search-nav--title Sans-16px-black-90%-bold-open align-self-center');
 // savedLeads = savedLeads.innerText
 console.log('savedLeads', savedLeads, savedLeads.length);
@@ -50,7 +52,10 @@ function checkStart(){
       window.scrollTo(0,100000);
       console.log('started?', started);
       // calling find names function
-      findNames();
+      setTimeout(function () {
+          findNames();
+      }, 1000);
+
 
     }else {
       console.log('stopped');
@@ -60,6 +65,7 @@ function checkStart(){
 }
 
 function findNames() {
+
   merged = [];
   var namesArr = [];
   var namesTitleArr = [];
@@ -81,7 +87,7 @@ function findNames() {
   var theMissings = [];
 
 
-  console.log('names',names,'titlesAndCompanies', titlesAndCompanies,'locations',locations);
+
 
 
   //turning names in to an array...
@@ -129,6 +135,7 @@ function findNames() {
       console.log("goodlengthres");
     }
     namesTitleArr[i] = namesTitleArr[i].replace("	","").replace("* *","*").replace("**","*").replace("*  *","*");
+    namesTitleArr[i] = namesTitleArr[i].replace("**","*")
   }
 
   console.log("adding prefixes to results");
@@ -171,8 +178,16 @@ sent = true;
     }
 
     var nextButton = document.getElementsByClassName('artdeco-table-next-btn')
-    console.log("CLICK!");
-    nextButton[0].click();
+
+    if (!clicked) {
+        console.log("CLICK!");
+      nextButton[0].click()
+      clicked = true;
+    }else {
+      console.log("already clicked");
+    }
+
+
     console.log('timesRun',timesRun);
     timesRun = 0;
 
