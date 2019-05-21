@@ -38,7 +38,12 @@ console.log('not end',response[response.length - 1]);
 
 function startSaving(output){
   console.log('startSaving', output);
-let clip = output;
+  let clip =[];
+  for (var i = 0; i < output.length; i++) {
+    console.log(output[i]);
+    clip.push(output[i].join('\n'));
+  }
+clip = clip.join('\n');
   document.oncopy = function(event) {
 console.log("oncopy",clip);
   event.clipboardData.setData('text/plain', "");
@@ -52,7 +57,8 @@ console.log("oncopy",clip);
   } catch (e) {
     console.error(e);
   }finally{
-    output = null;
+    clip = [];
+    output = []
   }
 
 

@@ -54,7 +54,7 @@ function checkStart(){
       // calling find names function
       setTimeout(function () {
           findNames();
-      }, 1000);
+      }, 1500);
 
 
     }else {
@@ -110,7 +110,7 @@ function findNames() {
   for(var i = 0; i < titlesAndCompanies.length; i++) {
 
 
-    titlesAndCompaniesArr.push(titlesAndCompanies[i].innerHTML.trim())
+    titlesAndCompaniesArr.push(titlesAndCompanies[i].innerText.trim())
 
   }
 
@@ -123,7 +123,7 @@ function findNames() {
 
     console.log(namesTitleArr[i]);
     namesTitleArr[i] = namesTitleArr[i].slice(0,-10)
-    namesTitleArr[i] = '\n' + namesTitleArr[i]
+    // namesTitleArr[i] = '\n' + namesTitleArr[i]
     namesTitleArr[i] = namesTitleArr[i].replace(/Go to.*? account page/g, '');
     res = namesTitleArr[i].split("*")
     console.log("res.length",res.length);
